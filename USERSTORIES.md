@@ -1,5 +1,38 @@
 # Documentary Proof of the Execution of the Quality Assurance Measures
 
+## Problems
+
++ Is the "userManagment" repo relevant for this document? Why is it not part of the back end repo?
++ There are many, many pull requests that cannot be associated with a user story! What to do with them? (`BF` stands for *bug fix*, `US` means that *there should be a user story for this pull request*, `?` indicates that I have no idea what this is.)
+	+ Unassociated pull request from the front end:
+		+ \#1 `BF`
+		+ \#2 `?`
+		+ \#3 `?`
+		+ \#8 `?`
+		+ \#9 `BF`
+		+ \#17 `BF`
+		+ \#19 `BF`
+		+ \#22 `US` (Implement project view and canvas edit view)
+		+ \#28 `BF`
+		+ \#29 `US`/`BF`? (Increase canvas size when editing it)
+		+ \#30 `US` (Add profile and edit profile views, some little tweaks)
+		+ \#31 `US` (Implement canvas deletion)
+		+ \#32 `BF`
+		+ \#33 `US` (Implement canvas creation)
+	+ Unassociated user stories from the back end:
+		+ \#2 `?`
+		+ \#5 `BF`
+		+ \#13 `BF`
+		+ \#14 `BF`
+		+ \#15 `?`
+		+ \#18 `US` (Implement functionality triggered by routes for getting projects and canvases)
+		+ \#19 `BF`
+		+ \#21 `US` (Implement canvas deletion)
+		+ \#22 `US` (Implement canvas creation)
+	+ __Please create an entry within the GitHub issue tracker for each pull request marked `BF`!__
+	+ __Please create a user story and submit it to me for each pull request marked `US`!__
+	+ __If you authored a `?` pull request, please explain to me what it does!__
+
 ## User Stories
 
 ### User Story #1: Registration of User Accounts
@@ -11,7 +44,7 @@
 	+ __Back end pull request #4: User lists and activating users__
 	+ __Back end pull request #7: Mail service__
 	+ __Front end pull request #4: Implement registration and notifications__
-	+ __Front end pull request #7:  Implement settings factory and refactor the registration__
+	+ __Front end pull request #7: Implement settings factory and refactor the registration__
 
 ### User Story #2: Changing User Account Passwords
 + __Velocity__: 10 Points
