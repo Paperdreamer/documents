@@ -1,7 +1,6 @@
 # Documentary Proof of the Execution of the Quality Assurance Measures
 
-* auto-gen TOC:
-{:toc}
+:with_toc_data
 
 ## Introduction
 
