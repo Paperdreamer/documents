@@ -1,7 +1,5 @@
 # Documentary Proof of the Execution of the Quality Assurance Measures
 
-:with_toc_data
-
 ## Introduction
 
 At the very beginning of this project, we created a document ("Qualitätssicherungsdokument") that outlined certain quality goals which were to be met by the software as well as measures and practices for the developers to adhere to in order to reach these quality goals. Here is a __shortened__ check-list-style summary of these goals:
