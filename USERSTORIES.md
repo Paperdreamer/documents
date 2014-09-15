@@ -140,11 +140,10 @@ Once I am logged in as administrator, I can open a view of all registered users.
 	+ __Front end pull request #6: Implement login live validation__
 
 ### User Story #10: Header Bar
-+ __Velocity__: 4 Points
++ __Velocity__: 15 Points
 + __Description__: As a user, I want to be able to switch between different views. I want to open a list of all public projects, a list of my projects and also my account settings from a header bar, which I can access on every page, as long as I'm logged in.
 + __Acceptance Test #1__: Before logging in, there is no header bar visible. Once I login as any user, a header view is shown with at least the entries "My Projects", "All Projects" and a link to my user account settings. Clicking on each link opens the page corresponding to it.
 + __Implementation__:
-	+ __Back end pull request #11: Add project controller and methods for getting belonged and all projects, add new paths to index__
 	+ __Front end pull request #10: Create a header bar for Paperdreamer__
 
 ### User Story #11, formerly #3.1: List of My Projects ("Dashboard")
