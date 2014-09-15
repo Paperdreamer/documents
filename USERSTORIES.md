@@ -1,9 +1,44 @@
 # Documentary Proof of the Execution of the Quality Assurance Measures
 
+* auto-gen TOC:
+{:toc}
+
+## Introduction
+
+At the very beginning of this project, we created a document ("Qualitätssicherungsdokument") that outlined certain quality goals which were to be met by the software as well as measures and practices for the developers to adhere to in order to reach these quality goals. Here is a __shortened__ check-list-style summary of these goals:
+
+1. __Ease of Use__
+	1. The user interface has to be visually consistent/coherent. Therefore, all UI elements must be part of Twitter's Bootstrap framework.
+	2. Each feature has to be accessible with no more than three clicks.
+
+2. __Functionality__
+	1. Each feature has to be described in a user story before its being implemented. This way, possible misunderstandings can be sorted out before one line onf code is being written.
+	2. Each user story comes with at least one so-called "acceptance test", which precisely (click-by-click) describes a scenario in which the new functionality is being applied. A user story may not be considered done until the test associated with it passed.
+	3. Towards the end of the development, one or more "usability tests" have to be conducted. A usability test consists of several questions to be answered by potential users of the software. The goal is to find out how satisfied they are with it and what they want to be done differently.
+
+3. __Analyzability (or "Understandability of the Source Code")__
+	1. Each source code change (addition, modification, or deletion) has to be associated with either
+		+ a user story or
+		+ a bug that is being tracked with the GitHub bug tracker.
+	2. Therefore, all so-called "pull requests" have to come with either a user story id or a bug id.
+	3. Each method has to come with a JavaDoc-style comment right above its signature that describes its what it does, its parameters, etc.
+
+As the title suggests, it is the purpose of this document to either proove that these goals have been reached or document the reasons why some of them could not be realized. `TO BE CONTINUED`
+
 ## Problems
 
 + Is the "userManagment" repo relevant for this document? Why is it not part of the back end repo?
 + There are many, many pull requests that cannot be associated with a user story! What to do with them? (`BF` stands for *bug fix*, `US` means that *there should be a user story for this pull request*, `?` indicates that I have no idea what this is.)
+	+ Unassociated pull requests from the back end:
+		+ \#2 `?`
+		+ \#5 `BF`
+		+ \#13 `BF`
+		+ \#14 `BF`
+		+ \#15 `?`
+		+ \#18 `US` (Implement functionality triggered by routes for getting projects and canvases)
+		+ \#19 `BF`
+		+ \#21 `US` (Implement canvas deletion)
+		+ \#22 `US` (Implement canvas creation)	
 	+ Unassociated pull request from the front end:
 		+ \#1 `BF`
 		+ \#2 `?`
@@ -19,16 +54,6 @@
 		+ \#31 `US` (Implement canvas deletion)
 		+ \#32 `BF`
 		+ \#33 `US` (Implement canvas creation)
-	+ Unassociated user stories from the back end:
-		+ \#2 `?`
-		+ \#5 `BF`
-		+ \#13 `BF`
-		+ \#14 `BF`
-		+ \#15 `?`
-		+ \#18 `US` (Implement functionality triggered by routes for getting projects and canvases)
-		+ \#19 `BF`
-		+ \#21 `US` (Implement canvas deletion)
-		+ \#22 `US` (Implement canvas creation)
 	+ __Please create an entry within the GitHub issue tracker for each pull request marked `BF`!__
 	+ __Please create a user story and submit it to me for each pull request marked `US`!__
 	+ __If you authored a `?` pull request, please explain to me what it does!__
@@ -104,7 +129,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: `TODO`
 + __Implementation__:
 	+ __Back end pull request #20: Add backend methods for profile and edit profile view__
-	+ `NO MATCHING FRONT END USER STORY`
+	+ `NO MATCHING FRONT END PULL REQUEST`
 
 ### User Story #9: Logging In
 + __Velocity__: `TODO`
