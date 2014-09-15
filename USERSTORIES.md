@@ -121,7 +121,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 	+ __Front end pull request #13:  Make admin userlist roles dropdowns, add methods for changing roles to controller and factory__
 
 ### User Story #8: Profile View
-+ __Velocity__: `TODO`
++ __Velocity__: 7 Points
 + __Description__: As a user, I want to be able to view my profile as well as other users' profiles. After I login to my account by clicking "View Your Profile" (or something similar), I want to be able to see my current profile information such as my avatar, user name, email address (and other personal information the user has provided). By clicking someone else's username I want to be able to view their profile.
 + __Acceptance Test #1__: `TODO`
 + __Implementation__:
@@ -129,7 +129,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 	+ `NO MATCHING FRONT END PULL REQUEST`
 
 ### User Story #9: Logging In
-+ __Velocity__: `TODO`
++ __Velocity__: 8 Points
 + __Description__: As a user (which can also be an administrator), I want to be able to log in to the platform. Therefore I enter my credentials (user name or email and password) into a login form. The login button will be unclickable unless both fields are filled with information that fits the format. If, and only if, the provided credetials were correct, access is being granted after clicking the login button. Otherwise, there will be an error message popping up.
 + __Acceptance Test #1__: Try to log in with fictional credentials. There should be an error message saying that the provided credentials weren't accepted.
 + __Acceptance Test #2__: Try to log in without a password, the login button should be unclickable, though.
@@ -140,7 +140,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 	+ __Front end pull request #6: Implement login live validation__
 
 ### User Story #10: Header Bar
-+ __Velocity__: `TODO`
++ __Velocity__: 4 Points
 + __Description__: As a user, I want to be able to switch between different views. I want to open a list of all public projects, a list of my projects and also my account settings from a header bar, which I can access on every page, as long as I'm logged in.
 + __Acceptance Test #1__: Before logging in, there is no header bar visible. Once I login as any user, a header view is shown with at least the entries "My Projects", "All Projects" and a link to my user account settings. Clicking on each link opens the page corresponding to it.
 + __Implementation__:
