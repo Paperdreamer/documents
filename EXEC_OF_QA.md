@@ -143,7 +143,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 ### User Story #8: Profile View
 + __Velocity Points__: 7
 + __Description__: As a user, I want to be able to view my profile as well as other users' profiles. After I login to my account by clicking "View Your Profile" (or something similar), I want to be able to see my current profile information such as my avatar, user name, email address (and other personal information the user has provided). By clicking someone else's username I want to be able to view their profile.
-+ __Acceptance Test #1__: `TODO`
++ __Acceptance Test #1__: After logging in as "Test User", I can go to my profile view by clicking "My Profile" from the navbar and other users' profiles from user list.
 + __Implementation__:
 	+ __Back end pull request #20: Add backend methods for profile and edit profile view__
 	+ `NO MATCHING FRONT END PULL REQUEST`
