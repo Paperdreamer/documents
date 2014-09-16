@@ -1,28 +1,13 @@
 # Documentary Proof of the Execution of the Quality Assurance Measures
 
-## Introduction
+## Table of Contents
++ Issues `PLEASE HELP FIXING`
++ Introduction
++ Obviously Reached Quality Goals
++ Quality Goals Enforced by Code Reviews
++ Partially Reached or Missed Quality Goals
 
-At the very beginning of this project, we created a document ("Qualitätssicherungsdokument") that outlined certain quality goals which were to be met by the software as well as measures and practices for the developers to adhere to in order to reach these quality goals. Here is a __shortened__ check-list-style summary of these goals:
-
-1. __Ease of Use__
-	1. The user interface has to be visually consistent/coherent. Therefore, all UI elements must be part of Twitter's Bootstrap framework.
-	2. Each feature has to be accessible with no more than three clicks.
-
-2. __Functionality__
-	1. Each feature has to be described in a user story before its being implemented. This way, possible misunderstandings can be sorted out before one line onf code is being written.
-	2. Each user story comes with at least one so-called "acceptance test", which precisely (click-by-click) describes a scenario in which the new functionality is being applied. A user story may not be considered done until the test associated with it passed.
-	3. Towards the end of the development, one or more "usability tests" have to be conducted. A usability test consists of several questions to be answered by potential users of the software. The goal is to find out how satisfied they are with it and what they want to be done differently.
-
-3. __Analyzability (or "Understandability of the Source Code")__
-	1. Each source code change (addition, modification, or deletion) has to be associated with either
-		+ a user story or
-		+ a bug that is being tracked with the GitHub bug tracker.
-	2. Therefore, all so-called "pull requests" have to come with either a user story id or a bug id.
-	3. Each method has to come with a JavaDoc-style comment right above its signature that describes its what it does, its parameters, etc.
-
-As the title suggests, it is the purpose of this document to either proove that these goals have been reached or document the reasons why some of them could not be realized. `TO BE CONTINUED`
-
-## Problems
+## ISSUES `PLEASE HELP FIXING`
 
 + Is the "userManagment" repo relevant for this document? Why is it not part of the back end repo?
 + There are many, many pull requests that cannot be associated with a user story! What to do with them? (`BF` stands for *bug fix*, `US` means that *there should be a user story for this pull request*, `?` indicates that I have no idea what this is.)
@@ -55,7 +40,34 @@ As the title suggests, it is the purpose of this document to either proove that 
 	+ __Please create a user story and submit it to me for each pull request marked `US`!__
 	+ __If you authored a `?` pull request, please explain to me what it does!__
 
-## User Stories
+## Introduction
+
+At the very beginning of this project, we created a document ("Qualitätssicherungsdokument") that outlined certain quality goals which were to be met by the software as well as measures and practices for the developers to adhere to in order to reach these quality goals. Here is a __shortened__, check-list-style summary of these goals:
+
+1. __Ease of Use__
+	1. The user interface has to be visually consistent/coherent. Therefore, all UI elements must be part of Twitter's Bootstrap framework.
+	2. Each feature has to be accessible with no more than three clicks.
+
+2. __Functionality__
+	1. Each feature has to be described in a user story before its being implemented. This way, possible misunderstandings with the client can be sorted out before one line of code is being written.
+	2. Each user story comes with at least one so-called "acceptance test", which precisely (click-by-click) describes a scenario in which the new functionality is being applied. A user story may not be considered done until the test associated with it passed.
+	3. Towards the end of the development, one or more "usability tests" (regarding the entire software) have to be conducted. A usability test consists of several questions to be answered by potential users of the software. The goal is to find out how satisfied they are with it and what they want to be done differently.
+
+3. __Analyzability (or "Understandability of the Source Code")__
+	1. Each source code change (addition, modification, or deletion) has to be associated with either a user story or a bug that is being tracked with the GitHub bug tracker. Therefore, all so-called "pull requests" have to come with either a user story id or a bug id.
+	3. Each method has to come with a JavaDoc-style comment right above its signature that describes its what it does, its parameters, etc.
+
+As the title suggests, it is the purpose of this document to either prove that these goals have been reached or document the reasons why some of them could not be realized. 
+
+## Obviously Reached Quality Goals
+
+However, whether certain quality goals have been reached or not is quite hard to "prove" as it is rather obvious if that is the case or not:
+
++ It is obvious that each feature has been described in a user story (__§ 2.1__) since everything that has been submitted to the repository through a pull request refers to at least one user story. This can easily be verified by checking out the descriptions of all the accepted ("merged") pull requests on GitHub. 
+	+ There is one exeption to this, though. There are pull requests that do not contain a user story id but an issue id instead. An issue id refers to a bug that is being tracked with the GitHub issue tracker. This as well as the aforementioned reveals that quality goal __§3.1__ has also been reached.
++ Furthermore, as one can easily verify below, each user story comes with at least one acceptance test (__§ 2.2__).
+
+## Quality Goals Enforced By Code Reviews
 
 ### User Story #1: Registration of User Accounts
 + __Velocity__: 10 Points
@@ -196,3 +208,6 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #16: Add new route /project to edit and delete projects to index.php, add methods to delete and edit (with actions of open and close) projects to project controller__
 	+ __Front end pull request #21: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory__
+
+## Partially Reached or Missed Quality Goals
+`TODO`
