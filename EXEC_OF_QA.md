@@ -203,11 +203,21 @@ Once I am logged in as administrator, I can open a view of all registered users.
 
 ### User Story #16, formerly #3.6: Closing Projects
 + __Velocity Points__: 10
-- __Description__: As an administrator, I want to be able to close an existing project. After doing that, no new changes can be made to this project by its members.
++ __Description__: As an administrator, I want to be able to close an existing project. After doing that, no new changes can be made to this project by its members.
 + __Acceptance Test #1__: After logging in as administrator "Test Admin", I can close project "Bar". I can then login as supervisor "Test Supervisor" of "Bar" and verify that "Bar" is indicated to be closed on my dashboard and all projects view. I can no longer make any changes on "Foo".
 + __Implementation__:
 	+ __Back end pull request #16: Add new route /project to edit and delete projects to index.php, add methods to delete and edit (with actions of open and close) projects to project controller__
 	+ __Front end pull request #21: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory__
+
+### User Story #17: Edit Profile View
++ __Velocity Points__: `TODO`
++ __Description__: As a user, I want to be able to edit my personal information such as email, gravatar email from an edit profile page. As an administrator, I want to be able to edit my and other users' personal information from an edit profile page.
++ __Acceptance Test #1__: After logging in as "Test User", I can go to my profile view and click "Edit Profile" to edit my profile and change my email from "test@user.com" to "dummy@user.com".
++ __Acceptance Test #2__: After logging in as "Test Admin" I can go to userlist, click "Test User"s user name to go to his profile view, click "Edit Profile" to edit his profile, and change his gravatar email from "gravatar@email.com" to 
+"profile@picture.com".
++ __Implementation__:
+	+ __Back end pull request #20: Add backend methods for profile and edit profile view__
+	+ `NO MATCHING FRONT END PULL REQUEST`
 
 ## Partially Reached or Missed Quality Goals
 `TODO`
