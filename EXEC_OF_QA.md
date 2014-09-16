@@ -63,11 +63,19 @@ As the title suggests, it is the purpose of this document to either prove that t
 
 However, whether certain quality goals have been reached or not is quite hard to "prove" as it is rather obvious if that is the case or not:
 
-+ It is obvious that each feature has been described in a user story (__§ 2.1__) since everything that has been submitted to the repository through a pull request refers to at least one user story. This can easily be verified by checking out the descriptions of all the accepted ("merged") pull requests on GitHub. 
++ It is obvious that each feature has been described in a user story (__§2.1__) since everything that has been submitted to the repository through a pull request refers to at least one user story. This can easily be verified by checking out the descriptions of all the accepted ("merged") pull requests on GitHub. 
 	+ There is one exeption to this, though. There are pull requests that do not contain a user story id but an issue id instead. An issue id refers to a bug that is being tracked with the GitHub issue tracker. This as well as the aforementioned reveals that quality goal __§3.1__ has also been reached.
-+ Furthermore, as one can easily verify below, each user story comes with at least one acceptance test (__§ 2.2__).
++ Furthermore, as one can easily verify below, each user story comes with at least one acceptance test (__§2.2__).
 
 ## Quality Goals Enforced By Code Reviews
+
+While the quality goals __§2.1__, __§2.2__, and __§3.1__ have "obviously" been reached, the implementaion of other quality goals had to be enforced in so-called "code reviews".
+
+__How did these code reviews work?__ Whenever a developer wanted to submit any kind of source code change (addition, modification, or deletion), he (there were no women involved) issued a so called "pull request". Then, all the other developers had to review the code of the pull request and verify that it fulfilled the relevant quality goals. If so, the submitted code was being merged into the repository. If not, the developers discussed until the code was changed to live up to the expected standard. Then, it would also be merged. Insummary, there was one code review per pull request and that code review happened entirely on the GitHub platform.
+
+__Which quality goals were relevant during the code reviews?__ The quality goals __§1.1__ (Visual consisency through Bootstrap), __§1.2__ (Accessibility of all features through three clicks at most), and __§3.3__ (Java-style comments of methods) were relevant during code reviews. However, the discussions during code reviews were not limited to that.
+
+__How are code reviews being documented here?__ Each user story has been implemented by at least one pull request. For each pull request, there has been a code review. Below you can see all the user stories including the pull requests associated with them. Futhermore, each pull request itself comes with a short description and a transcript of its code review. (At first, we considered to only list all the pull requests of the project als well as transcripts of their code reviews, however, these would seem incoherent if not mentioned in the context of a user story. Therefore, we decided to not only list pull requests and transcripts of code reviews below but also all of the user stories.)
 
 ### User Story #1: Registration of User Accounts
 + __Velocity Points__: 10
