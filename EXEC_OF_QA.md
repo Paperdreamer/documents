@@ -235,12 +235,18 @@ Once I am logged in as administrator, I can open a view of all registered users.
 
 ### User Story #19: Project View
 + __Velocity Points__: 15
-+ __Description__: As a regeistered user, I want to be able to view a project. That is, I want to view all of its panels (including their title, canvases, descriptions, and notes). As an artist of a particular project, I want to be able to move move panels around and therefore change their order. Furthermore, as an artist of a particular project, I want to be able to click a button for each panel that opens the so-called "panel edit view". (See user story #20 for details.)
++ __Description__: As a regeistered user, I want to be able to view a project. That is, I want to view all of its panels (including their title, canvases, descriptions, and notes). As an artist of a particular project, I want to be able
+	+ to create new panels or remove them,
+	+ to move panels around and therefore change their order, and 
+	+ to be able to click a button for each panel that opens the so-called "panel edit view". (See user story #20 for details).
 + __Acceptance Test #1__: After logging in as "Test User", who is not enrolled in any projects, I want to be able to click on "Test Project". The following screen has to show all panels of the aforementioned project.
 + __Acceptance Test #2__: After logging in as "Test User 2", who is enrolled in "Test Project" as an artist, I want to be able to click on "Test Project". The following screen has to show all panels which I can move around freely. For each panel, I can see a button that leads me to a view in which I can edit it.
 + __Implementation__:
 	+ `NO MATCHING BACK END PULL REQUEST`
 	+ __Front end pull request #22: Implement project view and panel edit view__
+	+ __Front end pull request #31: Implement panel deletion__
+	+ __Front end pull request #33: Implement panel creation and saving a project's panel constellation__
+	+ 
 
 ### User Story #20: Panel Edit View
 + __Velocity Points__: 20
@@ -254,6 +260,7 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 	+ `NO MATCHING BACK END PULL REQUEST`
 	+ __Front end pull request #22: Implement project view and panel edit view__
 	+ __Front end pull request #29: Increase canvas size when editing it__
+	+ __Front end pull request #36: Implement canvas saving__
 
 ## Partially Reached or Missed Quality Goals
 `TODO`
