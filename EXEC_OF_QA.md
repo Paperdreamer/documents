@@ -235,12 +235,25 @@ Once I am logged in as administrator, I can open a view of all registered users.
 
 ### User Story #19: Project View
 + __Velocity Points__: 15
-+ __Description__: As a regeistered user, I want to be able to view a project. That is, I want to view all of its panels (including their title, canvases, descriptions, and notes). As an artist of a particular project, I want to be able to move move panels around and therefore change their order. Furthermore, as an artist of a particular project, I want to be able to click a button for each panel that opens the so-called "canvas edit view". (See user story #20 for details.)
++ __Description__: As a regeistered user, I want to be able to view a project. That is, I want to view all of its panels (including their title, canvases, descriptions, and notes). As an artist of a particular project, I want to be able to move move panels around and therefore change their order. Furthermore, as an artist of a particular project, I want to be able to click a button for each panel that opens the so-called "panel edit view". (See user story #20 for details.)
 + __Acceptance Test #1__: After logging in as "Test User", who is not enrolled in any projects, I want to be able to click on "Test Project". The following screen has to show all panels of the aforementioned project.
 + __Acceptance Test #2__: After logging in as "Test User 2", who is enrolled in "Test Project" as an artist, I want to be able to click on "Test Project". The following screen has to show all panels which I can move around freely. For each panel, I can see a button that leads me to a view in which I can edit it.
 + __Implementation__:
 	+ `NO MATCHING BACK END PULL REQUEST`
-	+ Front end pull request #22: Implement project view and canvas edit view
+	+ Front end pull request #22: Implement project view and panel edit view
+
+### User Story #20: Panel Edit View
++ __Velocity Points__: 20
++ __Description__: As an artist enrolled in a particular project, I want to be able to edit each panel as I desire: Since a panel contains a canvas on which assets are composed, I want to be able to manipulate the way they are composed. That is, I want
+	+ to add (by choosing from a list of uploaded assets) and remove assets,
+	+ to change an assets position (including the layer its on) within the canvas, and 
+	+ to scale assets.
+Additionally, I must be able not just edit a panels canvas but also a panels title, description, and notes.
++ __Acceptance Test #1__: `TODO`
++ __Implementation__:
+	+ `NO MATCHING BACK END PULL REQUEST`
+	+ Front end pull request #22: Implement project view and panel edit view
+	+ Front end pull request #29: Increase canvas size when editing it
 
 ## Partially Reached or Missed Quality Goals
 `TODO`
