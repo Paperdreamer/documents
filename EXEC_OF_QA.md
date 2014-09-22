@@ -155,7 +155,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #2__: Try to log in without a password, the login button should be unclickable, though.
 + __Acceptance Test #3__: Log in with an existing user's credentials.
 + __Implementation__:
-	+ __Back end pull request #6: Implement GET /user route `?`__
+	+ __Back end pull request #6: Implement GET /user route__
 	+ __Front end pull request #4: Implement registration and notifications__
 	+ __Front end pull request #6: Implement login live validation__
 
