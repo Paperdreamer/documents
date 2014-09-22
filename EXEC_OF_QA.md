@@ -227,5 +227,11 @@ Once I am logged in as administrator, I can open a view of all registered users.
 	+ __Back end pull request #20: Add backend methods for profile and edit profile view__
 	+ `NO MATCHING FRONT END PULL REQUEST`
 
+### User Story #18: Open Projects
++ __Velocity Points__: 5
++ __Description__: As an administrator or a director of a project, I want to be able to open a closed project from the dashboard or the all projects view. After doing that the project can be worked on normally.
++ __Acceptance Test #1__: After logging in as "Test Admin", I can open the closed project "Project 1" by clicking "Open" from the dashboard. The indicator of "Project 1" is now "Open".
++ __Acceptance Test #2__: After logging in as "Test Director", I can open the closed project "Project 1" by clicking "Open" from the dashboard. The indicator of "Project 1" is now "Open". I cannot open a project that I am not the director of.
+
 ## Partially Reached or Missed Quality Goals
 `TODO`
