@@ -233,5 +233,14 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: After logging in as "Test Admin", I can open the closed project "Project 1" by clicking "Open" from the dashboard. The indicator of "Project 1" is now "Open".
 + __Acceptance Test #2__: After logging in as "Test Director", I can open the closed project "Project 1" by clicking "Open" from the dashboard. The indicator of "Project 1" is now "Open". I cannot open a project that I am not the director of.
 
+### User Story #19: Project View
++ __Velocity Points__: 15
++ __Description__: As a regeistered user, I want to be able to view a project. That is, I want to view all of its panels (including their title, canvases, descriptions, and notes). As an artist of a particular project, I want to be able to move move panels around and therefore change their order. Furthermore, as an artist of a particular project, I want to be able to click a button for each panel that opens the so-called "canvas edit view". (See user story #20 for details.)
++ __Acceptance Test #1__: After logging in as "Test User", who is not enrolled in any projects, I want to be able to click on "Test Project". The following screen has to show all panels of the aforementioned project.
++ __Acceptance Test #2__: After logging in as "Test User 2", who is enrolled in "Test Project" as an artist, I want to be able to click on "Test Project". The following screen has to show all panels which I can move around freely. For each panel, I can see a button that leads me to a view in which I can edit it.
++ __Implementation__:
+	+ `NO MATCHING BACK END PULL REQUEST`
+	+ Front end pull request #22: Implement project view and canvas edit view
+
 ## Partially Reached or Missed Quality Goals
 `TODO`
