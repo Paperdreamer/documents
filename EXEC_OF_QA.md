@@ -84,7 +84,6 @@ __How are code reviews being documented here?__ Each user story has been impleme
 + __Implementation__:
 	+ __Back end pull request #3: Server-side validation of registration data__
 	+ __Back end pull request #4: User lists and activating users__
-	+ __Back end pull request #7: Mail service__
 	+ __Front end pull request #4: Implement registration and notifications__
 	+ __Front end pull request #7: Implement settings factory and refactor the registration__
 
