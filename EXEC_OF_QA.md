@@ -243,6 +243,8 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #2__: After logging in as "Test User 2", who is enrolled in "Test Project" as an artist, I want to be able to click on "Test Project". The following screen has to show all panels which I can move around freely. For each panel, I can see a button that leads me to a view in which I can edit it.
 + __Implementation__:
 	+ __Back end pull request #18: Implement functionality triggered by routes for getting projects and canvases__
+	+ __Back end pull request #21: Implement panel deletion__
+	+ __Back end pull request #22: Implement panel creation__
 	+ __Front end pull request #22: Implement project view and panel edit view__
 	+ __Front end pull request #31: Implement panel deletion__
 	+ __Front end pull request #33: Implement panel creation and saving a project's panel constellation__
@@ -258,6 +260,7 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Acceptance Test #1__: `TODO`
 + __Implementation__:
 	+ __Back end pull request #18: Implement functionality triggered by routes for getting projects and canvases__
+	+ __Back end pull request #23: Implement panel saving__
 	+ __Front end pull request #22: Implement project view and panel edit view__
 	+ __Front end pull request #29: Increase canvas size when editing it__
 	+ __Front end pull request #36: Implement canvas saving__
