@@ -264,5 +264,13 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 	+ __Front end pull request #29: Increase canvas size when editing it__
 	+ __Front end pull request #36: Implement canvas saving__
 
+### User Story #21: Forgot Password
++ __Velocity Points__: 10
++ __Description__: As a user, I want to be able to be sent a random new password to my email address in case I forget mine. 
++ __Acceptance Test #1__: After logging in as "Test User", I can reset my password after giving my username and email address. I get a new random password to my email address "test@email.com". I can then login using the new password.
++ __Implementation__:
+ 	+ `NO MATCHING BACK END PULL REQUEST`
+ 	+ `NO MATCHING FRONT END PULL REQUEST`
+
 ## Partially Reached or Missed Quality Goals
 `TODO`
