@@ -272,5 +272,14 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
  	+ __Back end pull request #38: Add backend methods for user story #21 ('Forgot Password' )__
  	+ __Front end pull request #37: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix__
 
+### User Story #22: Commentary Area
++ __Velocity Points__: 15
++ __Description__: As a project member I want to be able to discuss things in a commentary area.
++ __Acceptance Test #1__: After logging in as "TestUser" and opening the Project View I can see all comments any user posted in this particular project. I can then specify a new comment with Title "Title" and Text "Text". After clicking "Post Comment" it will be added to the list of comments and be visible to everyone else in the project. Also if I'm privileged (Director of the project or Moderator/Administrator) I can remove any comment.
++ __Implementation__:
+ 	+ __Back end pull request #37: Add code to add/remove/get comments__
+ 	+ __Front end pull request #47: Add code to add/remove/show comments__
+
+ 
 ## Partially Reached or Missed Quality Goals
 `TODO`
