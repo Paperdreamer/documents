@@ -198,7 +198,8 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #2__: After logging in as "Test User", I can see "Foo" on my dashboard, all projects view and that it's open. I can login as "Test Director" and see the name change from "Dummy" to "Foo" on my dashboard and all projects view. I can then login as "Test Artist" and see the name change from "Dummy" to "Foo" on my all projects view but cannot see "Dummy" or "Foo" on my dashboard.
 + __Implementation__:
 	+ __Back end pull request #16: Add new route /project to edit and delete projects to index.php, add methods to delete and edit (with actions of open and close) projects to project controller__
-	+ `NO MATCHING FRONT END PULL REQUEST`
+	+ __Back end pull request #28:  Add methods to update users of projects in backend__
+	+ __Front end pull request #35:  Edit projects__
 
 ### User Story #15, formerly #3.5: Deleting Projects
 + __Velocity Points__: 5
