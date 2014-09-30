@@ -1,11 +1,10 @@
-# Documentary Proof of the Execution of the Quality Assurance Measures
-
 ## Table of Contents
 
 + Introduction
 + Obviously Reached Quality Goals
 + Quality Goals Enforced by Code Reviews
 + Partially Reached or Missed Quality Goals
++ Attachment: Usability Test
 
 ## Introduction
 
