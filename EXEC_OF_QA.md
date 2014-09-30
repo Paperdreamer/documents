@@ -282,7 +282,9 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Acceptance Test #1__: After logging in as "Test User" and opening a panel of the project view, I can see a button called "Upload asset". I can then press this button an chose an asset by double clicking it - it will be added to the panel's canvas then. I also can upload an asset by choosing a tag first, the file and a file name and then press "Upload". While the upload is in progress, a "please wait" message is shown. I am also able to click a button with a cross symbol to remove assets from a panel's canvas.
 + __Implementation__:
  	+ __Back end pull request #36: Implement Assetmanagement__
+ 		+ __Code Review__: No complaints were expressed during the code review.
  	+ __Front end pull request #46: Implement Assetmanagement__
+ 		+ __Code Review__: No complaints were expressed during the code review.
 
 ## Partially Reached or Missed Quality Goals
 `TODO`
