@@ -280,6 +280,15 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Implementation__:
  	+ __Back end pull request #37: Add code to add/remove/get comments__
  	+ __Front end pull request #47: Add code to add/remove/show comments__
+ 	+ 
+
+### User Story #23: Asset Management
++ __Velocity Points__: 15
++ __Description__: As a project member I want to be able to add and remove Assets from Canvases in Panels. Additionally I want to be able to upload Assets and choose a tag for it. After that I can remove an asset assigned to a canvas.
++ __Acceptance Test #1__: After logging in as "TestUser" and opening a Panel of the Project View I can see a button called "upload asset". I can then press this button an chose an asset by double clicking it - it will be added to the panel's canvas then. I also can upload an asset by choosing a tag first, the file and a file name and then press "upload". While the upload is in progress a "please wait" message is shown. I am also able to click a cross signed button to remove Assets from a panel's canvas.
++ __Implementation__:
+ 	+ __Back end pull request #36: Implement Assetmanagement__
+ 	+ __Front end pull request #46: Implement Assetmanagement__
 
  
 ## Partially Reached or Missed Quality Goals
