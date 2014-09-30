@@ -1,44 +1,11 @@
 # Documentary Proof of the Execution of the Quality Assurance Measures
 
 ## Table of Contents
-+ Issues `PLEASE HELP FIXING`
+
 + Introduction
 + Obviously Reached Quality Goals
 + Quality Goals Enforced by Code Reviews
 + Partially Reached or Missed Quality Goals
-
-## ISSUES `PLEASE HELP FIXING`
-
-+ Is the "userManagment" repo relevant for this document? Why is it not part of the back end repo?
-+ There are many, many pull requests that cannot be associated with a user story! What to do with them? (`BF` stands for *bug fix*, `US` means that *there should be a user story for this pull request*, `?` indicates that I have no idea what this is.)
-	+ Unassociated pull requests from the back end:
-		+ \#2 `?`
-		+ \#5 `BF`
-		+ \#13 `BF`
-		+ \#14 `BF`
-		+ \#15 `?`
-		+ \#18 `US` (Implement functionality triggered by routes for getting projects and canvases)
-		+ \#19 `BF`
-		+ \#21 `US` (Implement canvas deletion)
-		+ \#22 `US` (Implement canvas creation)	
-	+ Unassociated pull request from the front end:
-		+ \#1 `BF`
-		+ \#2 `?`
-		+ \#3 `?`
-		+ \#8 `?`
-		+ \#9 `BF`
-		+ \#17 `BF`
-		+ \#19 `BF`
-		+ \#22 `US` (Implement project view and canvas edit view)
-		+ \#28 `BF`
-		+ \#29 `US`/`BF`? (Increase canvas size when editing it)
-		+ \#30 `US` (Add profile and edit profile views, some little tweaks)
-		+ \#31 `US` (Implement canvas deletion)
-		+ \#32 `BF`
-		+ \#33 `US` (Implement canvas creation)
-	+ __Please create an entry within the GitHub issue tracker for each pull request marked `BF`!__
-	+ __Please create a user story and submit it to me for each pull request marked `US`!__
-	+ __If you authored a `?` pull request, please explain to me what it does!__
 
 ## Introduction
 
@@ -82,10 +49,14 @@ __How are code reviews being documented here?__ Each user story has been impleme
 + __Description__: As a person, I want to be able to register an account on a Paperdreamer instance. I want to enter my user name, email address and password and confirm the data to register myself as a user. This user account is not functional until an administrator confirms it.
 + __Acceptance Test #1__: After registering as a user called "Test User" with the email address testuser@paperdreamer.org, one has to verify that the user account is created in the database, but logging in will fail until an administrator enables it.
 + __Implementation__:
-	+ __Back end pull request #3: Server-side validation of registration data__
-	+ __Back end pull request #4: User lists and activating users__
-	+ __Front end pull request #4: Implement registration and notifications__
-	+ __Front end pull request #7: Implement settings factory and refactor the registration__
+	+ __Back end pull request #3__: Server-side validation of registration data
+		+ __Code Review__: No complaints were expressed during the code review.
+	+ __Back end pull request #4__: User lists and activating users
+	 	+ __Code Review__: No complaints were expressed during the code review.
+	+ __Front end pull request #4__: Implement registration and notifications
+		+ __Code Review__: No complaints were expressed during the code review.
+	+ __Front end pull request #7__: Implement settings factory and refactor the registration
+		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #2: Changing User Account Passwords
 + __Velocity Points__: 10
@@ -93,14 +64,26 @@ __How are code reviews being documented here?__ Each user story has been impleme
 + __Acceptance Test #1__: Using the login credentials of "Test User", one has to log in to the Paperdreamer platform using the generated password. Then, one has to change "Test User"'s password like described above. If, afterwards, loggin in with the new password works, this test can be considered done.
 + __Implementation__:
 	+ `TODO: NO MATCHING BACK END PULL REQUEST`
-	+ __Front end pull request #7:  Implement settings factory and refactor the registration__ `?`
+	+ `TODO: NO MATCHING FRONT END PULL REQUEST`
 
 ### User Story #3: Receiving an Email After Registration 
 + __Velocity Points__: 4
 + __Description__: After registering on a Paperdreamer instance, I will receive an email, where I need to confirm the entered data by clicking on a link. After this, the account will show up in the list of users for the administrator(s) to confirm.
 + __Acceptance Test #1__: After registering as a user, one has to verify the provided data by clicking on a link in a received email. After the link has been clicked by the newly registered user, this user needs to show up in the list of unconfirmed users (which can only be accessed by administrators).
 + __Implementation__:
-	+ __Back end pull request #7: Mail service__
+	+ __Back end pull request #7__: Mail service
+		+ __Code Review__:
+			+ *Lukas Appelhans*: Hey! I just merged my requests, so you have to update this one. Also you can then simply add a mail when an account got activated as well. (Which was implemented in my patch.) The code itself looks fine though!! :) Thanks, Lukas
+			+ *Lucas Baerenfaenger*: Since the database structure does not support email activation, this implementation just sends a mail to notify the user that he/she has to wait until an administrator activates the account.
+			+ *Lukas Appelhans*: You understood me wrong sorry. We need to send another email once the account got activated by an administrator! ;) That's what the first email also indicates.
+			+ *Lucas Baerenfaenger*: I don't know how to sync forks. Please merge my request so I can implement your wish in another pull request.
+			+ *Lukas Appelhans*: This merge request cannot be automatically merged. ;) We can discuss how to merge it locally (at your computer), then you can implement the rest and put it here. Then we can automatically merge it via the button here.
+			+ *Lukas Appelhans*: Read this: https://help.github.com/articles/syncing-a-fork
+			+ *Lucas Baerenfaenger*: Your wish is now implemented. See commit 962c007. Thanks for the link by the way.
+			+ *Lukas Appelhans*: Looks fine! Awesome! :)
+			+ *Tobias Muecksch*: I consent to boom1992. P.S: @onurv12 this pull request relies on some changes in the userManagement. See this pull request by Lucas Paperdreamer/userManagement#7
+			+ *Onur Vural*: Ok, will do. +1
+
 
 
 ### User Story #4: Confirming User Accounts
@@ -108,17 +91,20 @@ __How are code reviews being documented here?__ Each user story has been impleme
 + __Description__: As an administrator, I want to be able to confirm user accounts. After registering as user, the account is not activated, until I (or another administrator) enables it, by choosing to reject or accept it.
 + __Acceptance Test #1__: After registering as a user, my account is disabled and I cannot login. One has to verify that after confirming the account as administrator, the new user can log in with the data he entered in the original registration process.
 + __Implementation__:
-	+ __Back end pull request #4: User lists and activating users__
-	+ __Front end pull request #5: Implement user stories #4, #5 and #6__
-
+	+ __Back end pull request #4__: User lists and activating users
+		+ __Code Review__: See above.
+	+ __Front end pull request #5__: Implement user stories #4, #5 and #6
+		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #5: List of Not Yet Activated Users
 + __Velocity Points__: 10
 + __Description__: As an administrator, I want to see a list of user accounts which I need to accept or reject.
 + __Acceptance Test #1__: After registering as a new user, I login as administrator and can open the list of unconfirmed users. One has to confirm that the new user shows up in the list.
 + __Implementation__:
-	+ __Back end pull request #4: User lists and activating users__
-	+ __Front end pull request #5: Implement user stories #4, #5 and #6__
+	+ __Back end pull request #4__: User lists and activating users
+		+ __Code Review__: See above.
+	+ __Front end pull request #5__: Implement user stories #4, #5 and #6
+		+ __Code Review__: See above.
 
 ### User Story #6: List of All Users
 + __Velocity Points__: 10
@@ -126,8 +112,10 @@ __How are code reviews being documented here?__ Each user story has been impleme
 Once I am logged in as administrator, I can open a view of all registered users. This view will show at least each user name and the associated permissions ("Administrator" or "User").
 + __Acceptance Test #1__: After creating a new user ("Test User"), I can login as administrator and open the user view. "Test User" will show up with the associated permission being "User".
 + __Implementation__:
-	+ __Back end pull request #4: User lists and activating users__
-	+ __Front end pull request #5: Implement user stories #4, #5 and #6__
+	+ __Back end pull request #4__: User lists and activating users
+		+ __Code Review__: See above.
+	+ __Front end pull request #5__: Implement user stories #4, #5 and #6
+		+ __Code Review__: See above.
 
 
 ### User Story #7: Promoting Users
@@ -136,8 +124,14 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: After creating a new user ("Test User"), I can login as administrator and change his permissions to "Administrator". After logging out, I can login with "Test User" and change permissions as well.
 + __Acceptance Test #2__: After creating a new user ("Test User"), I can login as "God" administrator and change his permissions to "Administrator, non-deletable". After confirming my choice, deleting "Test User" is not possible.
 + __Implementation__:
-	+ __Back end pull request #9: Add methods for changing user roles__
-	+ __Front end pull request #13:  Make admin userlist roles dropdowns, add methods for changing roles to controller and factory__
+	+ __Back end pull request #9__: Add methods for changing user roles
+		+ __Code Review__:
+			+ *Tobias Muecksch*: You should ensure, that the user (who is logged in) is an administrator and therefore allowed to change roles. In my opinion there is a method in the userManager. If not please contact me. In case the user is not an administrator please return HTTP Status Code 403 (Forbidden)
+			+ *Onur Vural*: If the user is not administrator the dropdowns are not even shown. They are simply plain text. If you think it is still needed then I'll do it.
+			+ *Tobias Muecksch*: Of course it is needed. The backend can be accessed without the GUI. If a user directly triggers a route the function has to make sure the user has the right to do that. This would be a very heavy security issue.
+			+ *Tobias Muecksch*: There should be a method for this. Do not access the session directly. I'd suggest to add a function to the userManagement which should only do this: `return (bool) $this->getSession()[isAdmin];`
+	+ __Front end pull request #13__:  Make admin userlist roles dropdowns, add methods for changing roles to controller and factory
+		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #8: Profile View
 + __Velocity Points__: 7
@@ -276,21 +270,19 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 
 ### User Story #22: Commentary Area
 + __Velocity Points__: 15
-+ __Description__: As a project member I want to be able to discuss things in a commentary area.
-+ __Acceptance Test #1__: After logging in as "TestUser" and opening the Project View I can see all comments any user posted in this particular project. I can then specify a new comment with Title "Title" and Text "Text". After clicking "Post Comment" it will be added to the list of comments and be visible to everyone else in the project. Also if I'm privileged (Director of the project or Moderator/Administrator) I can remove any comment.
++ __Description__: As a project member, I want to be able to discuss things in a commentary area.
++ __Acceptance Test #1__: After logging in as "Test User" and opening the Project View, I can see all comments any user posted in this particular project. I can then specify a new comment with title "Title" and Text "Text". After clicking "Post Comment", it will be added to the list of comments and be visible to everyone else in the project. Also if I'm privileged (Director of the project or Moderator/Administrator), I can remove any comment.
 + __Implementation__:
  	+ __Back end pull request #37: Add code to add/remove/get comments__
  	+ __Front end pull request #47: Add code to add/remove/show comments__
- 	+ 
 
 ### User Story #23: Asset Management
 + __Velocity Points__: 15
-+ __Description__: As a project member I want to be able to add and remove Assets from Canvases in Panels. Additionally I want to be able to upload Assets and choose a tag for it. After that I can remove an asset assigned to a canvas.
-+ __Acceptance Test #1__: After logging in as "TestUser" and opening a Panel of the Project View I can see a button called "upload asset". I can then press this button an chose an asset by double clicking it - it will be added to the panel's canvas then. I also can upload an asset by choosing a tag first, the file and a file name and then press "upload". While the upload is in progress a "please wait" message is shown. I am also able to click a cross signed button to remove Assets from a panel's canvas.
++ __Description__: As a project member, I want to be able to add and remove assets from canvases in panels. Additionally, I want to be able to upload assets and choose a tag for it. After that, I can remove an asset assigned to a canvas.
++ __Acceptance Test #1__: After logging in as "Test User" and opening a panel of the project view, I can see a button called "Upload asset". I can then press this button an chose an asset by double clicking it - it will be added to the panel's canvas then. I also can upload an asset by choosing a tag first, the file and a file name and then press "Upload". While the upload is in progress, a "please wait" message is shown. I am also able to click a button with a cross symbol to remove assets from a panel's canvas.
 + __Implementation__:
  	+ __Back end pull request #36: Implement Assetmanagement__
  	+ __Front end pull request #46: Implement Assetmanagement__
 
- 
 ## Partially Reached or Missed Quality Goals
 `TODO`
