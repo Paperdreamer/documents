@@ -317,7 +317,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 	+ to change an assets position (including the layer its on) within the canvas, and 
 	+ to scale assets.
 Additionally, I must be able not just edit a panels canvas but also a panels title, description, and notes.
-+ __Acceptance Test #1__: `TODO`
++ __Acceptance Test #1__:  After logging in as "Test User", who is enrolled in a project I'm clicking on a button called "Edit" which is contained by a panel. Afterwards the canvas is opened. Then I can move the assets in the canvas around, add new ones and scale them. When I've finished I can press save. Opening the project again now shows the new state of the manipulted panel.
 + __Implementation__:
 	+ __Back end pull request #18: Implement functionality triggered by routes for getting projects and canvases__
 		+ __Code Review 1__: 
