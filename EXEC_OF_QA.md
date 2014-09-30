@@ -138,7 +138,8 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Description__: As a user, I want to be able to view my profile as well as other users' profiles. After I login to my account by clicking "View Your Profile" (or something similar), I want to be able to see my current profile information such as my avatar, user name, email address (and other personal information the user has provided). By clicking someone else's username I want to be able to view their profile.
 + __Acceptance Test #1__: After logging in as "Test User", I can go to my profile view by clicking "My Profile" from the navbar and other users' profiles from user list.
 + __Implementation__:
-	+ __Back end pull request #20: Add backend methods for profile and edit profile view__
+	+ __Back end pull request #20__: Add backend methods for profile and edit profile view
+		+ __Code Review__: No complaints were expressed during the code review.
 	+ `NO MATCHING FRONT END PULL REQUEST`
 
 ### User Story #9: Logging In
@@ -148,24 +149,48 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #2__: Try to log in without a password, the login button should be unclickable, though.
 + __Acceptance Test #3__: Log in with an existing user's credentials.
 + __Implementation__:
-	+ __Back end pull request #6: Implement GET /user route__
-	+ __Front end pull request #4: Implement registration and notifications__
-	+ __Front end pull request #6: Implement login live validation__
-	+ __Front end pull request #8: Implement user factory__
+	+ __Back end pull request #6__: Implement GET /user route
+		+ __Code Review__:
+			+ `CODE PIC MISSING`
+			+ *Lukas Appelhans*: Was ist der Unterschied zwischen Flight::json und json_encode?
+			+ *Tobias Muecksch*: There's not that big of a difference, but we should use Flight's json function in the future.
+	+ __Front end pull request #4__: Implement registration and notifications
+		+ __Code Review__: See above.
+	+ __Front end pull request #6__: Implement login live validation
+		+ __Code Review__: No complaints were expressed during the code review.
+	+ __Front end pull request #8__: Implement user factory
+		+ __Code Review__:
+			+ `CODE PIC MISSING`
+			+ *Lukas Appelhans*: What is the _.bind doing?
+			+ *Tobias Muecksch*: It binds the environment of the callback function to this, as callbacks loose their environment.
+
 
 ### User Story #10: Header Bar
 + __Velocity  Points__: 15
 + __Description__: As a user, I want to be able to switch between different views. I want to open a list of all public projects, a list of my projects and also my account settings from a header bar, which I can access on every page, as long as I'm logged in.
 + __Acceptance Test #1__: Before logging in, there is no header bar visible. Once I login as any user, a header view is shown with at least the entries "My Projects", "All Projects" and a link to my user account settings. Clicking on each link opens the page corresponding to it.
 + __Implementation__:
-	+ __Front end pull request #10: Create a header bar for Paperdreamer__
+	+ __Front end pull request #10__: Create a header bar for Paperdreamer
+		+ __Code Review__:
+            + *Tobias Muecksch*: Why is the commit "Don't redirect to dashboard when there was an error in the backend" also included in [front end] Pull Request number 9? After you fixed that, feel free to merge the request right away. (bearenfeanger agrees.)
+            + *Lukas Appelhans*: It is included, because I based this branch on the branch which fixed it. (To make the backend work here as well.) I just thought I could merge the other request rather fast so you guys can already use the backend properly again. About coding style: I just copied it from the other methods, but I agree, will fix the other methods as well and merge!
+            + *Lukas Appelhans*: Sorry, this has to be reviewed again. I forgot to add a file and also fixed a bug with the wrong tab being selected. Thanks!
+            + *Tobias Muecksch*: You should remove the whole ... tag.
+            + *Tobias Muecksch*: Please do not commit debug commands. By the way console.log causes IE to stop execution.
+
+
 
 ### User Story #11, formerly #3.1: List of My Projects ("Dashboard")
 + __Velocity  Points__: 10
 + __Description__: As a user, I want to see a page containing a list of all projects that I am participating in. These projects should have an indicator that shows whether they are open. This page should be the first thing I see after logging in. This should also be my home page.
 + __Acceptance Test #1__: After creating a new project "Foo" and assigning user "Test User" to it I can login as "Test User" and see "Foo" on my dashboard and that it is open.
 + __Implementation__:
-	+ __Back end pull request #11: Add project controller and methods for getting belonged and all projects, add new paths to index__
+	+ __Back end pull request #11__: Add project controller and methods for getting belonged and all projects, add new paths to index
+		+ __Code Review__:
+			+ `CODE PIC MISSING`
+			+ *Lukas Appelhans*: Probably merge the two GETs and rather use a parameter. What do you say Tobias? I'm not sure!
+			+ *Tobias Muecksch*: I have to think about that... I don't like it, but I have no better idea yet.
+			+ *Tobias Muecksch*: Since I had no better idea yet, I will merge this as soon as you respected what boom1991 said in the first two comments.
 	+ `NO MATCHING FRONT END USER STORY`
 
 ### User Story #12, formerly #3.2: List of All Projects
@@ -173,8 +198,10 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Description__: As a user, I want to be able to open a page where I can see all the projects on the platform, regardless of my membership and an indicator which shows whether they are open.
 + __Acceptance Test #1__: After creating a new project "Foo" and assigning user "Test User" to it, I can login as "Test User" or another user "Test User 2" and see "Foo" on the all projects view and that it is open.
 + __Implementation__:
-	+ __Back end pull request #11: Add project controller and methods for getting belonged and all projects, add new paths to index__
-	+ __Front end pull request #16: Add dashboard and all projects view, add factories and controllers for those__
+	+ __Back end pull request #11__: Add project controller and methods for getting belonged and all projects, add new paths to index
+		+ __Code Review__: See above.
+	+ __Front end pull request #16__: Add dashboard and all projects view, add factories and controllers for those
+		+ __Code Review__:  No complaints were expressed during the code review.
 
 ### User Story #13, formerly #3.3: Creating Projects
 + __Velocity Points__: 10
@@ -182,9 +209,19 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: After logging in as administrator "Test Admin", I can create a new Project "Dummy" and give it a description of "Dummy Project". I can assign user "Test User" to this project and make him the director of the project. I can then verify that this project is created in the database.
 + __Acceptance Test #2__: After logging in as "Test User", I can see "Dummy" on my dashboard, my all projects view and that it's open. I can then login as user "Test User 2" and see "Dummy" on my all projects view and that it's open but not on my dashboard.
 + __Implementation__:
-	+ __Back end pull request #17: Add createProject route to flight and implement it__
-	+ __Front end pull request #23: Add functionality to add new projects__
-	+ __Front end pull request #27: Add autocomplete to create project page__
+	+ __Back end pull request #17__: Add createProject route to flight and implement it
+		+ __Code Review__:
+			+ `CODE PIC MISSING`
+			+ *Onur Vural*: How can someone be the director before creating the project? And why must the creator always be the director?
+			+ *Lukas Appelhans*: He didn't select himself as the director of the new project.
+			+ *Lukas Appelhans*: The creator must be admin or director. I think it makes sense pretty much, you shouldn't be able to create projects which other people own. Remember the Director is more like the "god-admin" of projects.
+			+ *Onur Vural*: and how is someone a director before a project is created?
+			+ *Lukas Appelhans*: Selected as director. ;) Basically current-user == future director of the new project.
+			+ *Onur Vural*: Ok, I'll take your word for it. I have no problems if it works.
+	+ __Front end pull request #23__: Add functionality to add new projects
+		+ __Code Review__: No complaints were expressed during the code review.
+	+ __Front end pull request #27__: Add autocomplete to create project page
+		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #14, formerly #3.4: Editing a Project's Meta Data
 + __Velocity Points__: 7
@@ -192,25 +229,36 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: After logging in as administrator "Test Admin", I can edit the project "Dummy" by changing its name to "Foo" and its description from "Dummy Project" to "Project Foo", by assigning user "Test User" as supervisor, by making the director "Test Director" an artist and by removing artist "Test Artist" from the project.
 + __Acceptance Test #2__: After logging in as "Test User", I can see "Foo" on my dashboard, all projects view and that it's open. I can login as "Test Director" and see the name change from "Dummy" to "Foo" on my dashboard and all projects view. I can then login as "Test Artist" and see the name change from "Dummy" to "Foo" on my all projects view but cannot see "Dummy" or "Foo" on my dashboard.
 + __Implementation__:
-	+ __Back end pull request #16: Add new route /project to edit and delete projects to index.php, add methods to delete and edit (with actions of open and close) projects to project controller__
-	+ __Back end pull request #28:  Add methods to update users of projects in backend__
-	+ __Front end pull request #35:  Edit projects__
+	+ __Back end pull request #28__:  Add methods to update users of projects in backend
+		+ __Code Review__: No complaints were expressed during the code review.
+	+ __Front end pull request #35__:  Edit projects
+		+ __Code Review__: 
+			+ `MISSING CODE PIC`
+			+ *Onur Vural*: Is this the way to fix the 'Reload' problem?
+			+ *Lukas Appelhans*: This makes a page refresh when we save all stuff indeed.
+			+ `MISSING CODE PIC`
+			+ *Onur Vural*: why did you add the "event"s here? they were working just fine
+			+ *Lukas Appelhans*: No, at least for me it wasn't. the event object didn't exist for me, thus I needed to pass it from the original ng-click here...
+			+ *Onur Vural*: ok
+			+ *Tobias Muecksch*: @boom1992 that's very strange. should not happen... Are you 100% sure, this really deletes the project which is intended to be deleted?
+			+ *Lucas Appelhans*: Uh why should it delete the wrong one? The event just gets passed in order to not change the location to the project, but stay on the dashboard...
+			+ *Lukas Appelhans*: This will have to get another revision. :( Lucas and I kind of worked on some of the same things in the backend/userManagement, so I'll have to redo half of it I think!
 
 ### User Story #15, formerly #3.5: Deleting Projects
 + __Velocity Points__: 5
 + __Description__: As an administrator, I want to be able to delete an existing project. After that, this project is permanently removed from the database and cannot be reached again.
 + __Acceptance Test #1__: After logging in as administrator "Test Admin", I can delete project "Foo". I can verify that "Foo" is removed from the database. I can login as artist "Test Artist" of "Foo" and verify that it's no longer on my dashboard or all projects view.
 + __Implementation__:
-	+ __Back end pull request #16: Add new route /project to edit and delete projects to index.php, add methods to delete and edit (with actions of open and close) projects to project controller__
-	+ __Front end pull request #21: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory__
+	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
+	+ __Front end pull request #21__: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory
 
 ### User Story #16, formerly #3.6: Closing Projects
 + __Velocity Points__: 10
 + __Description__: As an administrator, I want to be able to close an existing project. After doing that, no new changes can be made to this project by its members.
 + __Acceptance Test #1__: After logging in as administrator "Test Admin", I can close project "Bar". I can then login as supervisor "Test Supervisor" of "Bar" and verify that "Bar" is indicated to be closed on my dashboard and all projects view. I can no longer make any changes on "Foo".
 + __Implementation__:
-	+ __Back end pull request #16: Add new route /project to edit and delete projects to index.php, add methods to delete and edit (with actions of open and close) projects to project controller__
-	+ __Front end pull request #21: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory__
+	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
+	+ __Front end pull request #21__: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory
 
 ### User Story #17: Edit Profile View
 + __Velocity Points__: `TODO`
@@ -219,14 +267,17 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #2__: After logging in as "Test Admin" I can go to userlist, click "Test User"s user name to go to his profile view, click "Edit Profile" to edit his profile, and change his gravatar email from "gravatar@email.com" to 
 "profile@picture.com".
 + __Implementation__:
-	+ __Back end pull request #20: Add backend methods for profile and edit profile view__
-	+ __Front end pull request #17: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix__
+	+ __Back end pull request #20__: Add backend methods for profile and edit profile view
+	+ __Front end pull request #17__: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix
 
 ### User Story #18: Open Projects
 + __Velocity Points__: 5
 + __Description__: As an administrator or a director of a project, I want to be able to open a closed project from the dashboard or the all projects view. After doing that the project can be worked on normally.
 + __Acceptance Test #1__: After logging in as "Test Admin", I can open the closed project "Project 1" by clicking "Open" from the dashboard. The indicator of "Project 1" is now "Open".
 + __Acceptance Test #2__: After logging in as "Test Director", I can open the closed project "Project 1" by clicking "Open" from the dashboard. The indicator of "Project 1" is now "Open". I cannot open a project that I am not the director of.
++ __Implementation__:
+	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
+	+ `NO MATCHING FRONT END PULL REQUEST`
 
 ### User Story #19: Project View
 + __Velocity Points__: 15
@@ -255,18 +306,46 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Acceptance Test #1__: `TODO`
 + __Implementation__:
 	+ __Back end pull request #18: Implement functionality triggered by routes for getting projects and canvases__
+		+ __Code Review 1__: 
+			+ *Onur Vural*: ![](http://paperdreamer.org/gh/be-pr18-1.png) Why did you return those to the old version? Last I checked they gave errors with the new Flight version
+			+ *Lukas Appelhans*: Indeed...
+			+ *Lucas Baerenfaenger*: Thank you. I'm going to correct this.
+		+ __Code Review 2__: No complaints were expressed during the code review.
 	+ __Back end pull request #23: Implement panel saving__
+		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #22: Implement project view and panel edit view__
+		+ __Code Review__:
+			+  *Lukas Appelhans*: ![](http://paperdreamer.org/gh/fe-pr22-1.png) I don't really get this, what does this do? Also an empty canvasView.html was added? Mistake?
+			+  *Tobias Muecksch*: it creates a html5 canvas element and sets it's DOM-ID to the ID of the Canvas. The Problem is: this is still work in progress, but since you need to integrate your implementation (like assigning users to projects and so on), I released it early. My exams are in two weeks and i can't guarantee to finish this until then and i don't want the implementation to be stuck because of this issue. But you are right. canvasView.html is not supposed to be committed. I will remove it in the next commit.
+			+  *Lukas Appelhans*: Okay, I suppose it's a good thing :)
 	+ __Front end pull request #29: Increase canvas size when editing it__
+		+ __Code Review__:
+			+ No complaints were expressed during the code review.
 	+ __Front end pull request #36: Implement canvas saving__
+		+ __Code Review__:
+			+ No complaints were expressed during the code review.
 
 ### User Story #21: Forgot Password
 + __Velocity Points__: 10
 + __Description__: As a user, I want to be able to be sent a random new password to my email address in case I forget mine. 
 + __Acceptance Test #1__: Before logging in as "Test User", I can reset my password after giving my username and email address. I get a new random password to my email address "test@email.com". I can then login using the new password.
 + __Implementation__:
+	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
+	+ `NO MATCHING FRONT END PULL REQUEST`
++ __Implementation__:
+	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
+	+ `NO MATCHING FRONT END PULL REQUEST`
++ __Implementation__:
+	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
+	+ `NO MATCHING FRONT END PULL REQUEST`
++ __Implementation__:
  	+ __Back end pull request #38: Add backend methods for user story #21 ('Forgot Password' )__
- 	+ __Front end pull request #37: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix__
+ 		+ __Code Review__: No complaints were expressed during the code review.
+ 	+ __Front end pull request #38: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix__
+ 		+ __Code Review__: 
+ 			+ *Lukas Appelhans*: In my opinion the random password should be generated here in PHP and not be sent via HTTP in plaintext!!!
+ 			+ *Onur Vural:* I see what you mean and I fixed it but just out of curiosity what would have happened if it was in plaintext?
+ 			+ *Lukas Appelhans*: Basically the server admin can read all the traffic and thus find out all passwords of all users.
 
 ### User Story #22: Commentary Area
 + __Velocity Points__: 15
@@ -274,7 +353,10 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Acceptance Test #1__: After logging in as "Test User" and opening the Project View, I can see all comments any user posted in this particular project. I can then specify a new comment with title "Title" and Text "Text". After clicking "Post Comment", it will be added to the list of comments and be visible to everyone else in the project. Also if I'm privileged (Director of the project or Moderator/Administrator), I can remove any comment.
 + __Implementation__:
  	+ __Back end pull request #37: Add code to add/remove/get comments__
+ 		+ __Code Review__: 
+ 			+ *Tobias Muecksch*: This is not merge able :persevere: Could you please take the newest SQL and copy the lines regarding the comments table into it? Thanks in advance :smile:
  	+ __Front end pull request #47: Add code to add/remove/show comments__
+ 		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #23: Asset Management
 + __Velocity Points__: 15
@@ -282,7 +364,9 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Acceptance Test #1__: After logging in as "Test User" and opening a panel of the project view, I can see a button called "Upload asset". I can then press this button an chose an asset by double clicking it - it will be added to the panel's canvas then. I also can upload an asset by choosing a tag first, the file and a file name and then press "Upload". While the upload is in progress, a "please wait" message is shown. I am also able to click a button with a cross symbol to remove assets from a panel's canvas.
 + __Implementation__:
  	+ __Back end pull request #36: Implement Assetmanagement__
+ 		+ __Code Review__: No complaints were expressed during the code review.
  	+ __Front end pull request #46: Implement Assetmanagement__
+ 		+ __Code Review__: No complaints were expressed during the code review.
 
 ## Partially Reached or Missed Quality Goals
 `TODO`
