@@ -258,7 +258,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #21__: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory
 		+ __Code Review__:
-			+ `![](http://paperdreamer.org/gh/f21.png)`
+			+ ![](http://paperdreamer.org/gh/f21.png)
 			+ *Lukas Appelhans*: Why not iterate through belongedProjects only and then use the filter method? http://www.tutorialspoint.com/javascript/array_filter.htm
 			+ *Onur Vural*: I could but in this tutorial there is a huge section about compatibility. Are you positive that it won't be a problem?
 			+ *Tobias Muecksch*: We have underscore.js included in paper dreamer. see http://underscorejs.org/#filter There is a more convenient filter method.
