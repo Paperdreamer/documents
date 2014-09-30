@@ -297,12 +297,12 @@ Once I am logged in as administrator, I can open a view of all registered users.
 		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Implement open/close and delete buttons for dashboard and all projects view, User Stories 15, 16 and 18 #21__
 		+ __Code Review 1__:
-			+ *Lukas Appelhans*: ![](http://paperdreamer.org/gh/fe-pr21-1.png) Why not iterate through belongedProjects only and then use the filter method? http://www.tutorialspoint.com/javascript/array_filter.htm
+			+ ![](http://paperdreamer.org/gh/fe-pr21-1.png)
+			+ *Lukas Appelhans*: Why not iterate through belongedProjects only and then use the filter method? http://www.tutorialspoint.com/javascript/array_filter.htm
 			+ *Onur Vural*: I could but in this tutorial there is a huge section about compatibility. Are you positive that it won't be a problem?
 			+ *Tobias Muecksch*: We have underscore.js included in paper dreamer. see http://underscorejs.org/#filter There is a more convenient filter method.
 			+ *Onur Vural*: @tobiasmuecksch Thanks for the tip. After implementing it with filtering I don't see why it's better. Since it's not only necessary to filter but to assign too it didn't improve the code that much and made it more complicated. I'd like to let it as it was if it's ok with you, too
 			+ *Tobias Muecksch*: @onurv12 it's not more complicated if you are familiar with this code style. But I don't mind. Leave it as it was.
-
  	+ __Code Review 2__: No complaints were expressed during the code review.
 
 ### User Story #19: Project View
