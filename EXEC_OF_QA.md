@@ -338,7 +338,8 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Implementation__:
 	+ __Back end pull request #18: Implement functionality triggered by routes for getting projects and canvases__
 		+ __Code Review 1__: 
-			+ *Onur Vural*: ![](http://paperdreamer.org/gh/be-pr18-1.png) Why did you return those to the old version? Last I checked they gave errors with the new Flight version
+			+ ![](http://paperdreamer.org/gh/be-pr18-1.png)
+			+ *Onur Vural*: Why did you return those to the old version? Last I checked they gave errors with the new Flight version
 			+ *Lukas Appelhans*: Indeed...
 			+ *Lucas Baerenfaenger*: Thank you. I'm going to correct this.
 		+ __Code Review 2__: No complaints were expressed during the code review.
@@ -346,7 +347,8 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #22: Implement project view and panel edit view__
 		+ __Code Review__:
-			+  *Lukas Appelhans*: ![](http://paperdreamer.org/gh/fe-pr22-1.png) I don't really get this, what does this do? Also an empty canvasView.html was added? Mistake?
+			+ ![](http://paperdreamer.org/gh/fe-pr22-1.png) 
+			+  *Lukas Appelhans*: I don't really get this, what does this do? Also an empty canvasView.html was added? Mistake?
 			+  *Tobias Muecksch*: it creates a html5 canvas element and sets it's DOM-ID to the ID of the Canvas. The Problem is: this is still work in progress, but since you need to integrate your implementation (like assigning users to projects and so on), I released it early. My exams are in two weeks and i can't guarantee to finish this until then and i don't want the implementation to be stuck because of this issue. But you are right. canvasView.html is not supposed to be committed. I will remove it in the next commit.
 			+  *Lukas Appelhans*: Okay, I suppose it's a good thing :)
 	+ __Front end pull request #29: Increase canvas size when editing it__
