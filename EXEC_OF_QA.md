@@ -143,7 +143,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #20__: Add backend methods for profile and edit profile view
 		+ __Code Review__: See above.
-	+ __Front end pull request #30__: Add profile and edit profile views, some little tweaks, User Stories 8 and 17, fix issues 12 and 20__
+	+ __Front end pull request #30__: Add profile and edit profile views, some little tweaks, User Stories 8 and 17, fix issues 12 and 20
 		+ __Code Review__: See above.
 
 ### User Story #9: Logging In
