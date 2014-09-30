@@ -63,8 +63,10 @@ __How are code reviews being documented here?__ Each user story has been impleme
 + __Description__: As a user, I want to be able to change the password that I use to log in to the Paperdreamer platform. For security purposes, I want to be forced to enter my current password twice before entering my desired password (twice, also). The next time I want to log in, I want to be able to do so using the new password.
 + __Acceptance Test #1__: Using the login credentials of "Test User", one has to log in to the Paperdreamer platform using the generated password. Then, one has to change "Test User"'s password like described above. If, afterwards, loggin in with the new password works, this test can be considered done.
 + __Implementation__:
-	+ `TODO: NO MATCHING BACK END PULL REQUEST`
-	+ `TODO: NO MATCHING FRONT END PULL REQUEST`
+	+ __Back end pull request #20__: Add backend methods for profile and edit profile view
+		+ __Code Review__: No complaints were expressed during the code review.
+	+ __Front end pull request #30__: Add profile and edit profile views, some little tweaks, User Stories 8 and 17, fix issues 12 and 20__
+		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #3: Receiving an Email After Registration 
 + __Velocity Points__: 4
@@ -140,8 +142,9 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: After logging in as "Test User", I can go to my profile view by clicking "My Profile" from the navbar and other users' profiles from user list.
 + __Implementation__:
 	+ __Back end pull request #20__: Add backend methods for profile and edit profile view
-		+ __Code Review__: No complaints were expressed during the code review.
-	+ `NO MATCHING FRONT END PULL REQUEST`
+		+ __Code Review__: See above.
+	+ __Front end pull request #30__: Add profile and edit profile views, some little tweaks, User Stories 8 and 17, fix issues 12 and 20__
+		+ __Code Review__: See above.
 
 ### User Story #9: Logging In
 + __Velocity Points__: 8
