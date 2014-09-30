@@ -152,7 +152,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #6__: Implement GET /user route
 		+ __Code Review__:
-			+ `CODE PIC MISSING`
+			+ ![](http://paperdreamer.org/gh/b6.png)
 			+ *Lukas Appelhans*: Was ist der Unterschied zwischen Flight::json und json_encode?
 			+ *Tobias Muecksch*: There's not that big of a difference, but we should use Flight's json function in the future.
 	+ __Front end pull request #4__: Implement registration and notifications
@@ -161,7 +161,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #8__: Implement user factory
 		+ __Code Review__:
-			+ `CODE PIC MISSING`
+			+ ![](http://paperdreamer.org/gh/f8.png)
 			+ *Lukas Appelhans*: What is the _.bind doing?
 			+ *Tobias Muecksch*: It binds the environment of the callback function to this, as callbacks loose their environment.
 
@@ -188,7 +188,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #11__: Add project controller and methods for getting belonged and all projects, add new paths to index
 		+ __Code Review__:
-			+ `CODE PIC MISSING`
+			+ `![](http://paperdreamer.org/gh/b11.png)`
 			+ *Lukas Appelhans*: Probably merge the two GETs and rather use a parameter. What do you say Tobias? I'm not sure!
 			+ *Tobias Muecksch*: I have to think about that... I don't like it, but I have no better idea yet.
 			+ *Tobias Muecksch*: Since I had no better idea yet, I will merge this as soon as you respected what boom1991 said in the first two comments.
@@ -212,7 +212,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #17__: Add createProject route to flight and implement it
 		+ __Code Review__:
-			+ `CODE PIC MISSING`
+			+ ![](http://paperdreamer.org/gh/b17.png)
 			+ *Onur Vural*: How can someone be the director before creating the project? And why must the creator always be the director?
 			+ *Lukas Appelhans*: He didn't select himself as the director of the new project.
 			+ *Lukas Appelhans*: The creator must be admin or director. I think it makes sense pretty much, you shouldn't be able to create projects which other people own. Remember the Director is more like the "god-admin" of projects.
@@ -234,10 +234,10 @@ Once I am logged in as administrator, I can open a view of all registered users.
 		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #35__:  Edit projects
 		+ __Code Review__: 
-			+ `MISSING CODE PIC`
+			+ ![](http://paperdreamer.org/gh/f35_1.png)
 			+ *Onur Vural*: Is this the way to fix the 'Reload' problem?
 			+ *Lukas Appelhans*: This makes a page refresh when we save all stuff indeed.
-			+ `MISSING CODE PIC`
+			+ ![](http://paperdreamer.org/gh/f35_2.png)
 			+ *Onur Vural*: why did you add the "event"s here? they were working just fine
 			+ *Lukas Appelhans*: No, at least for me it wasn't. the event object didn't exist for me, thus I needed to pass it from the original ng-click here...
 			+ *Onur Vural*: ok
@@ -254,7 +254,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #21__: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory
 		+ __Code Review__:
-			+ `CODE PIC MISSING`
+			+ `![](http://paperdreamer.org/gh/f21.png)`
 			+ *Lukas Appelhans*: Why not iterate through belongedProjects only and then use the filter method? http://www.tutorialspoint.com/javascript/array_filter.htm
 			+ *Onur Vural*: I could but in this tutorial there is a huge section about compatibility. Are you positive that it won't be a problem?
 			+ *Tobias Muecksch*: We have underscore.js included in paper dreamer. see http://underscorejs.org/#filter There is a more convenient filter method.
