@@ -266,7 +266,12 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Acceptance Test #1__: Before logging in as "Test User", I can reset my password after giving my username and email address. I get a new random password to my email address "test@email.com". I can then login using the new password.
 + __Implementation__:
  	+ __Back end pull request #38: Add backend methods for user story #21 ('Forgot Password' )__
- 	+ __Front end pull request #37: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix__
+ 		+ __Code Review__: No complaints were expressed during the code review.
+ 	+ __Front end pull request #38: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix__
+ 		+ __Code Review__: 
+ 			+ *Lukas Appelhans*: In my opinion the random password should be generated here in PHP and not be sent via HTTP in plaintext!!!
+ 			+ *Onur Vural:* I see what you mean and I fixed it but just out of curiosity what would have happened if it was in plaintext?
+ 			+ *Lukas Appelhans*: Basically the server admin can read all the traffic and thus find out all passwords of all users.
 
 ### User Story #22: Commentary Area
 + __Velocity Points__: 15
