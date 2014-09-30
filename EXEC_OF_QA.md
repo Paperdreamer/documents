@@ -40,7 +40,7 @@ While the quality goals __§2.1__, __§2.2__, and __§3.1__ have "obviously" bee
 
 __How did these code reviews work?__ Whenever a developer wanted to submit any kind of source code change (addition, modification, or deletion), he (there were no women involved) issued a so called "pull request". Then, all the other developers had to review the code of the pull request and verify that it fulfilled the relevant quality goals. If so, the submitted code was being merged into the repository. If not, the developers discussed until the code was changed to live up to the expected standard. Then, it would also be merged. Insummary, there was one code review per pull request and that code review happened entirely on the GitHub platform.
 
-__Which quality goals were relevant during the code reviews?__ The quality goals __§1.1__ (Visual consisency through Bootstrap), __§1.2__ (Accessibility of all features through three clicks at most), and __§3.3__ (Java-style comments of methods) were relevant during code reviews. However, the discussions during code reviews were not limited to that.
+__Which quality goals were relevant during the code reviews?__ The quality goals __§1.1__ (Visual consisency through Bootstrap), __§1.2__ (Accessibility of all features through three clicks at most), and __§3.3__ (Java-style comments of methods) were relevant during code reviews. However, the discussions during code reviews were __not limited__ to that.
 
 __How are code reviews being documented here?__ Each user story has been implemented by at least one pull request. For each pull request, there has been a code review. Below you can see all the user stories including the pull requests associated with them. Futhermore, each pull request itself comes with a short description and a transcript of its code review. (At first, we considered to only list all the pull requests of the project als well as transcripts of their code reviews, however, these would seem incoherent if not mentioned in the context of a user story. Therefore, we decided to not only list pull requests and transcripts of code reviews below but also all of the user stories.)
 
@@ -182,8 +182,6 @@ Once I am logged in as administrator, I can open a view of all registered users.
             + *Tobias Muecksch*: You should remove the whole ... tag.
             + *Tobias Muecksch*: Please do not commit debug commands. By the way console.log causes IE to stop execution.
 
-
-
 ### User Story #11, formerly #3.1: List of My Projects ("Dashboard")
 + __Velocity  Points__: 10
 + __Description__: As a user, I want to see a page containing a list of all projects that I am participating in. These projects should have an indicator that shows whether they are open. This page should be the first thing I see after logging in. This should also be my home page.
@@ -295,15 +293,14 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
 		+ __Code Review__: No complaints were expressed during the code review.
-	+ __Implement open/close and delete buttons for dashboard and all projects view, User Stories 15, 16 and 18 #21__
-		+ __Code Review 1__:
+	+ __Front end pull request #21__: Implement open/close and delete buttons for dashboard and all projects view, User Stories 15, 16 and 18
+		+ __Code Review__:
 			+ ![](http://paperdreamer.org/gh/fe-pr21-1.png)
 			+ *Lukas Appelhans*: Why not iterate through belongedProjects only and then use the filter method? http://www.tutorialspoint.com/javascript/array_filter.htm
 			+ *Onur Vural*: I could but in this tutorial there is a huge section about compatibility. Are you positive that it won't be a problem?
 			+ *Tobias Muecksch*: We have underscore.js included in paper dreamer. see http://underscorejs.org/#filter There is a more convenient filter method.
 			+ *Onur Vural*: @tobiasmuecksch Thanks for the tip. After implementing it with filtering I don't see why it's better. Since it's not only necessary to filter but to assign too it didn't improve the code that much and made it more complicated. I'd like to let it as it was if it's ok with you, too
 			+ *Tobias Muecksch*: @onurv12 it's not more complicated if you are familiar with this code style. But I don't mind. Leave it as it was.
- 	+ __Code Review 2__: No complaints were expressed during the code review.
 
 ### User Story #19: Project View
 + __Velocity Points__: 15
@@ -314,17 +311,17 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: After logging in as "Test User", who is not enrolled in any projects, I want to be able to click on "Test Project". The following screen has to show all panels of the aforementioned project.
 + __Acceptance Test #2__: After logging in as "Test User 2", who is enrolled in "Test Project" as an artist, I want to be able to click on "Test Project". The following screen has to show all panels which I can move around freely. For each panel, I can see a button that leads me to a view in which I can edit it.
 + __Implementation__:
-	+ __Back end pull request #18: Implement functionality triggered by routes for getting projects and canvases__
-		+ __Code Review__: See user story 20.
-	+ __Back end pull request #21: Implement panel deletion__
+	+ __Back end pull request #18__: Implement functionality triggered by routes for getting projects and canvases
+		+ __Code Review__: See user story #20.
+	+ __Back end pull request #21__: Implement panel deletion
 		+ __Code Review__: No complaints were expressed during the code review.
-	+ __Back end pull request #22: Implement panel creation__
+	+ __Back end pull request #22__: Implement panel creation
 		+ __Code Review__: No complaints were expressed during the code review.
-	+ __Front end pull request #22: Implement project view and panel edit view__
-		+ __Code Review__: See user story 20.
-	+ __Front end pull request #31: Implement panel deletion__
+	+ __Front end pull request #22__: Implement project view and panel edit view
+		+ __Code Review__: See user story #20.
+	+ __Front end pull request #31__: Implement panel deletion
 		+ __Code Review__: No complaints were expressed during the code review.
-	+ __Front end pull request #33: Implement panel creation and saving a project's panel constellation__
+	+ __Front end pull request #33__: Implement panel creation and saving a project's panel constellation
 		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #20: Panel Edit View
@@ -336,25 +333,24 @@ Once I am logged in as administrator, I can open a view of all registered users.
 Additionally, I must be able not just edit a panels canvas but also a panels title, description, and notes.
 + __Acceptance Test #1__:  After logging in as "Test User", who is enrolled in a project I'm clicking on a button called "Edit" which is contained by a panel. Afterwards the canvas is opened. Then I can move the assets in the canvas around, add new ones and scale them. When I've finished I can press save. Opening the project again now shows the new state of the manipulted panel.
 + __Implementation__:
-	+ __Back end pull request #18: Implement functionality triggered by routes for getting projects and canvases__
-		+ __Code Review 1__: 
+	+ __Back end pull request #18__: Implement functionality triggered by routes for getting projects and canvases
+		+ __Code Review__: 
 			+ ![](http://paperdreamer.org/gh/be-pr18-1.png)
 			+ *Onur Vural*: Why did you return those to the old version? Last I checked they gave errors with the new Flight version
 			+ *Lukas Appelhans*: Indeed...
 			+ *Lucas Baerenfaenger*: Thank you. I'm going to correct this.
-		+ __Code Review 2__: No complaints were expressed during the code review.
-	+ __Back end pull request #23: Implement panel saving__
+	+ __Back end pull request #23__: Implement panel saving
 		+ __Code Review__: No complaints were expressed during the code review.
-	+ __Front end pull request #22: Implement project view and panel edit view__
+	+ __Front end pull request #22__: Implement project view and panel edit view
 		+ __Code Review__:
 			+ ![](http://paperdreamer.org/gh/fe-pr22-1.png) 
 			+  *Lukas Appelhans*: I don't really get this, what does this do? Also an empty canvasView.html was added? Mistake?
 			+  *Tobias Muecksch*: it creates a html5 canvas element and sets it's DOM-ID to the ID of the Canvas. The Problem is: this is still work in progress, but since you need to integrate your implementation (like assigning users to projects and so on), I released it early. My exams are in two weeks and i can't guarantee to finish this until then and i don't want the implementation to be stuck because of this issue. But you are right. canvasView.html is not supposed to be committed. I will remove it in the next commit.
 			+  *Lukas Appelhans*: Okay, I suppose it's a good thing :)
-	+ __Front end pull request #29: Increase canvas size when editing it__
+	+ __Front end pull request #29__: Increase canvas size when editing it
 		+ __Code Review__:
 			+ No complaints were expressed during the code review.
-	+ __Front end pull request #36: Implement canvas saving__
+	+ __Front end pull request #36__: Implement canvas saving
 		+ __Code Review__:
 			+ No complaints were expressed during the code review.
 
@@ -363,9 +359,9 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Description__: As a user, I want to be able to be sent a random new password to my email address in case I forget mine. 
 + __Acceptance Test #1__: Before logging in as "Test User", I can reset my password after giving my username and email address. I get a new random password to my email address "test@email.com". I can then login using the new password.
 + __Implementation__:
- 	+ __Back end pull request #38: Add backend methods for user story #21 ('Forgot Password' )__
+ 	+ __Back end pull request #38__: Add backend methods for user story #21 ('Forgot Password' )
  		+ __Code Review__: No complaints were expressed during the code review.
- 	+ __Front end pull request #38: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix__
+ 	+ __Front end pull request #38__: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix
  		+ __Code Review__: 
  			+ *Lukas Appelhans*: In my opinion the random password should be generated here in PHP and not be sent via HTTP in plaintext!!!
  			+ *Onur Vural:* I see what you mean and I fixed it but just out of curiosity what would have happened if it was in plaintext?
@@ -376,10 +372,10 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Description__: As a project member, I want to be able to discuss things in a commentary area.
 + __Acceptance Test #1__: After logging in as "Test User" and opening the Project View, I can see all comments any user posted in this particular project. I can then specify a new comment with title "Title" and Text "Text". After clicking "Post Comment", it will be added to the list of comments and be visible to everyone else in the project. Also if I'm privileged (Director of the project or Moderator/Administrator), I can remove any comment.
 + __Implementation__:
- 	+ __Back end pull request #37: Add code to add/remove/get comments__
+ 	+ __Back end pull request #37__: Add code to add/remove/get comments
  		+ __Code Review__:
  			+ *Tobias Muecksch*: This is not merge able :persevere: Could you please take the newest SQL and copy the lines regarding the comments table into it? Thanks in advance :smile:
- 	+ __Front end pull request #47: Add code to add/remove/show comments__
+ 	+ __Front end pull request #47__: Add code to add/remove/show comments
  		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #23: Asset Management
@@ -387,9 +383,9 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Description__: As a project member, I want to be able to add and remove assets from canvases in panels. Additionally, I want to be able to upload assets and choose a tag for it. After that, I can remove an asset assigned to a canvas.
 + __Acceptance Test #1__: After logging in as "Test User" and opening a panel of the project view, I can see a button called "Upload asset". I can then press this button an chose an asset by double clicking it - it will be added to the panel's canvas then. I also can upload an asset by choosing a tag first, the file and a file name and then press "Upload". While the upload is in progress, a "please wait" message is shown. I am also able to click a button with a cross symbol to remove assets from a panel's canvas.
 + __Implementation__:
- 	+ __Back end pull request #36: Implement Assetmanagement__
+ 	+ __Back end pull request #36__: Implement Assetmanagement
  		+ __Code Review__: No complaints were expressed during the code review.
- 	+ __Front end pull request #46: Implement Assetmanagement__
+ 	+ __Front end pull request #46__: Implement Assetmanagement
  		+ __Code Review__: No complaints were expressed during the code review.
 
 ## Partially Reached or Missed Quality Goals
