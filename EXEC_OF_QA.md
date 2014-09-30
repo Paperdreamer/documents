@@ -65,7 +65,7 @@ __How are code reviews being documented here?__ Each user story has been impleme
 + __Implementation__:
 	+ __Back end pull request #20__: Add backend methods for profile and edit profile view
 		+ __Code Review__: No complaints were expressed during the code review.
-	+ __Front end pull request #30__: Add profile and edit profile views, some little tweaks, User Stories 8 and 17, fix issues 12 and 20__
+	+ __Front end pull request #30__: Add profile and edit profile views, some little tweaks, User Stories 8 and 17, fix issues 12 and 20
 		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #3: Receiving an Email After Registration 
