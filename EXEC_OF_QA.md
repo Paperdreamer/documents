@@ -195,7 +195,8 @@ Once I am logged in as administrator, I can open a view of all registered users.
 			+ *Lukas Appelhans*: Probably merge the two GETs and rather use a parameter. What do you say Tobias? I'm not sure!
 			+ *Tobias Muecksch*: I have to think about that... I don't like it, but I have no better idea yet.
 			+ *Tobias Muecksch*: Since I had no better idea yet, I will merge this as soon as you respected what boom1991 said in the first two comments.
-	+ `NO MATCHING FRONT END USER STORY`
+	+ __Front end pull request #16__: Add dashboard and all projects view, add factories and controllers for those
+		+ __Code Review__:  No complaints were expressed during the code review.
 
 ### User Story #12, formerly #3.2: List of All Projects
 + __Velocity Points__: 8
@@ -205,7 +206,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 	+ __Back end pull request #11__: Add project controller and methods for getting belonged and all projects, add new paths to index
 		+ __Code Review__: See above.
 	+ __Front end pull request #16__: Add dashboard and all projects view, add factories and controllers for those
-		+ __Code Review__:  No complaints were expressed during the code review.
+		+ __Code Review__: See above.
 
 ### User Story #13, formerly #3.3: Creating Projects
 + __Velocity Points__: 10
