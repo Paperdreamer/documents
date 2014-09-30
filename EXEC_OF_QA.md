@@ -188,7 +188,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #11__: Add project controller and methods for getting belonged and all projects, add new paths to index
 		+ __Code Review__:
-			+ `![](http://paperdreamer.org/gh/b11.png)`
+			+ ![](http://paperdreamer.org/gh/b11.png)
 			+ *Lukas Appelhans*: Probably merge the two GETs and rather use a parameter. What do you say Tobias? I'm not sure!
 			+ *Tobias Muecksch*: I have to think about that... I don't like it, but I have no better idea yet.
 			+ *Tobias Muecksch*: Since I had no better idea yet, I will merge this as soon as you respected what boom1991 said in the first two comments.
