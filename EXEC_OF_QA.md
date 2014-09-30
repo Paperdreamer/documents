@@ -344,15 +344,6 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Description__: As a user, I want to be able to be sent a random new password to my email address in case I forget mine. 
 + __Acceptance Test #1__: Before logging in as "Test User", I can reset my password after giving my username and email address. I get a new random password to my email address "test@email.com". I can then login using the new password.
 + __Implementation__:
-	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
-	+ `NO MATCHING FRONT END PULL REQUEST`
-+ __Implementation__:
-	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
-	+ `NO MATCHING FRONT END PULL REQUEST`
-+ __Implementation__:
-	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
-	+ `NO MATCHING FRONT END PULL REQUEST`
-+ __Implementation__:
  	+ __Back end pull request #38: Add backend methods for user story #21 ('Forgot Password' )__
  		+ __Code Review__: No complaints were expressed during the code review.
  	+ __Front end pull request #38: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix__
