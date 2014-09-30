@@ -126,6 +126,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #9__: Add methods for changing user roles
 		+ __Code Review__:
+			+ `CODE PIC MISSING`
 			+ *Tobias Muecksch*: You should ensure, that the user (who is logged in) is an administrator and therefore allowed to change roles. In my opinion there is a method in the userManager. If not please contact me. In case the user is not an administrator please return HTTP Status Code 403 (Forbidden)
 			+ *Onur Vural*: If the user is not administrator the dropdowns are not even shown. They are simply plain text. If you think it is still needed then I'll do it.
 			+ *Tobias Muecksch*: Of course it is needed. The backend can be accessed without the GUI. If a user directly triggers a route the function has to make sure the user has the right to do that. This would be a very heavy security issue.
@@ -250,7 +251,15 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: After logging in as administrator "Test Admin", I can delete project "Foo". I can verify that "Foo" is removed from the database. I can login as artist "Test Artist" of "Foo" and verify that it's no longer on my dashboard or all projects view.
 + __Implementation__:
 	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
+		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #21__: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory
+		+ __Code Review__:
+			+ `CODE PIC MISSING`
+			+ *Lukas Appelhans*: Why not iterate through belongedProjects only and then use the filter method? http://www.tutorialspoint.com/javascript/array_filter.htm
+			+ *Onur Vural*: I could but in this tutorial there is a huge section about compatibility. Are you positive that it won't be a problem?
+			+ *Tobias Muecksch*: We have underscore.js included in paper dreamer. see http://underscorejs.org/#filter There is a more convenient filter method.
+			+ *Onur Vural*: @tobiasmuecksch Thanks for the tip. After implementing it with filtering I don't see why it's better. Since it's not only necessary to filter but to assign too it didn't improve the code that much and made it more complicated. I'd like to let it as it was if it's ok with you, too
+			+ @onurv12 it's not more complicated if you are familiar with this code style. But I don't mind. Leave it as it was.
 
 ### User Story #16, formerly #3.6: Closing Projects
 + __Velocity Points__: 10
@@ -258,7 +267,9 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: After logging in as administrator "Test Admin", I can close project "Bar". I can then login as supervisor "Test Supervisor" of "Bar" and verify that "Bar" is indicated to be closed on my dashboard and all projects view. I can no longer make any changes on "Foo".
 + __Implementation__:
 	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
+		+ __Code Review__: See above.
 	+ __Front end pull request #21__: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory
+		+ __Code Review__: See above.
 
 ### User Story #17: Edit Profile View
 + __Velocity Points__: `TODO`
@@ -268,7 +279,9 @@ Once I am logged in as administrator, I can open a view of all registered users.
 "profile@picture.com".
 + __Implementation__:
 	+ __Back end pull request #20__: Add backend methods for profile and edit profile view
-	+ __Front end pull request #17__: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix
+    	+ __Code Review__: No complaints were expressed during the code review.
+	+ __Front end pull request #17__: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and fix issue #26
+    	+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #18: Open Projects
 + __Velocity Points__: 5
