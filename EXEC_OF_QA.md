@@ -277,7 +277,16 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #2__: After logging in as "Test Director", I can open the closed project "Project 1" by clicking "Open" from the dashboard. The indicator of "Project 1" is now "Open". I cannot open a project that I am not the director of.
 + __Implementation__:
 	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
-	+ `NO MATCHING FRONT END PULL REQUEST`
+		+ __Code Review__: No complaints were expressed during the code review.
+	+ __Implement open/close and delete buttons for dashboard and all projects view, User Stories 15, 16 and 18 #21__
+		+ __Code Review 1__:
+			+ *Lukas Appelhans*: ![](http://paperdreamer.org/gh/fe-pr21-1.png) Why not iterate through belongedProjects only and then use the filter method? http://www.tutorialspoint.com/javascript/array_filter.htm
+			+ *Onur Vural*: I could but in this tutorial there is a huge section about compatibility. Are you positive that it won't be a problem?
+			+ *Tobias Muecksch*: We have underscore.js included in paper dreamer. see http://underscorejs.org/#filter There is a more convenient filter method.
+			+ *Onur Vural*: @tobiasmuecksch Thanks for the tip. After implementing it with filtering I don't see why it's better. Since it's not only necessary to filter but to assign too it didn't improve the code that much and made it more complicated. I'd like to let it as it was if it's ok with you, too
+			+ *Tobias Muecksch*: @onurv12 it's not more complicated if you are familiar with this code style. But I don't mind. Leave it as it was.
+
+ 	+ __Code Review 2__: No complaints were expressed during the code review.
 
 ### User Story #19: Project View
 + __Velocity Points__: 15
@@ -289,12 +298,17 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #2__: After logging in as "Test User 2", who is enrolled in "Test Project" as an artist, I want to be able to click on "Test Project". The following screen has to show all panels which I can move around freely. For each panel, I can see a button that leads me to a view in which I can edit it.
 + __Implementation__:
 	+ __Back end pull request #18: Implement functionality triggered by routes for getting projects and canvases__
+		+ __Code Review__: See user story 20.
 	+ __Back end pull request #21: Implement panel deletion__
+		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Back end pull request #22: Implement panel creation__
+		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #22: Implement project view and panel edit view__
+		+ __Code Review__: See user story 20.
 	+ __Front end pull request #31: Implement panel deletion__
+		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #33: Implement panel creation and saving a project's panel constellation__
-	+ 
+		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #20: Panel Edit View
 + __Velocity Points__: 20
@@ -353,7 +367,7 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Acceptance Test #1__: After logging in as "Test User" and opening the Project View, I can see all comments any user posted in this particular project. I can then specify a new comment with title "Title" and Text "Text". After clicking "Post Comment", it will be added to the list of comments and be visible to everyone else in the project. Also if I'm privileged (Director of the project or Moderator/Administrator), I can remove any comment.
 + __Implementation__:
  	+ __Back end pull request #37: Add code to add/remove/get comments__
- 		+ __Code Review__: 
+ 		+ __Code Review__:
  			+ *Tobias Muecksch*: This is not merge able :persevere: Could you please take the newest SQL and copy the lines regarding the comments table into it? Thanks in advance :smile:
  	+ __Front end pull request #47: Add code to add/remove/show comments__
  		+ __Code Review__: No complaints were expressed during the code review.
