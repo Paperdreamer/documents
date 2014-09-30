@@ -156,7 +156,8 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #6: Implement GET /user route__
 	+ __Front end pull request #4: Implement registration and notifications__
-	+ __Front end pull request #6: Implement login live validation__
+	+ __Front end pull request #6: Implement login live validation_
+	+ __Front end pull request #8: Implement userfactory_
 
 ### User Story #10: Header Bar
 + __Velocity  Points__: 15
