@@ -274,7 +274,10 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Acceptance Test #1__: After logging in as "Test User" and opening the Project View, I can see all comments any user posted in this particular project. I can then specify a new comment with title "Title" and Text "Text". After clicking "Post Comment", it will be added to the list of comments and be visible to everyone else in the project. Also if I'm privileged (Director of the project or Moderator/Administrator), I can remove any comment.
 + __Implementation__:
  	+ __Back end pull request #37: Add code to add/remove/get comments__
+ 		+ __Code Review__: 
+ 			+ *Tobias Muecksch*: This is not merge able :persevere: Could you please take the newest SQL and copy the lines regarding the comments table into it? Thanks in advance :smile:
  	+ __Front end pull request #47: Add code to add/remove/show comments__
+ 		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #23: Asset Management
 + __Velocity Points__: 15
