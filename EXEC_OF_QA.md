@@ -276,7 +276,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 		+ __Code Review__: See above.
 
 ### User Story #17: Edit Profile View
-+ __Velocity Points__: `TODO`
++ __Velocity Points__: 10
 + __Description__: As a user, I want to be able to edit my personal information such as email, gravatar email from an edit profile page. As an administrator, I want to be able to edit my and other users' personal information from an edit profile page.
 + __Acceptance Test #1__: After logging in as "Test User", I can go to my profile view and click "Edit Profile" to edit my profile and change my email from "test@user.com" to "dummy@user.com".
 + __Acceptance Test #2__: After logging in as "Test Admin" I can go to userlist, click "Test User"s user name to go to his profile view, click "Edit Profile" to edit his profile, and change his gravatar email from "gravatar@email.com" to 
