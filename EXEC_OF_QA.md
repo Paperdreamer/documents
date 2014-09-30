@@ -63,8 +63,10 @@ __How are code reviews being documented here?__ Each user story has been impleme
 + __Description__: As a user, I want to be able to change the password that I use to log in to the Paperdreamer platform. For security purposes, I want to be forced to enter my current password twice before entering my desired password (twice, also). The next time I want to log in, I want to be able to do so using the new password.
 + __Acceptance Test #1__: Using the login credentials of "Test User", one has to log in to the Paperdreamer platform using the generated password. Then, one has to change "Test User"'s password like described above. If, afterwards, loggin in with the new password works, this test can be considered done.
 + __Implementation__:
-	+ `TODO: NO MATCHING BACK END PULL REQUEST`
-	+ `TODO: NO MATCHING FRONT END PULL REQUEST`
+	+ __Back end pull request #20__: Add backend methods for profile and edit profile view
+		+ __Code Review__: No complaints were expressed during the code review.
+	+ __Front end pull request #30__: Add profile and edit profile views, some little tweaks, User Stories 8 and 17, fix issues 12 and 20
+		+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #3: Receiving an Email After Registration 
 + __Velocity Points__: 4
@@ -126,6 +128,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #9__: Add methods for changing user roles
 		+ __Code Review__:
+			+ ![](http://paperdreamer.org/gh/b9.png)
 			+ *Tobias Muecksch*: You should ensure, that the user (who is logged in) is an administrator and therefore allowed to change roles. In my opinion there is a method in the userManager. If not please contact me. In case the user is not an administrator please return HTTP Status Code 403 (Forbidden)
 			+ *Onur Vural*: If the user is not administrator the dropdowns are not even shown. They are simply plain text. If you think it is still needed then I'll do it.
 			+ *Tobias Muecksch*: Of course it is needed. The backend can be accessed without the GUI. If a user directly triggers a route the function has to make sure the user has the right to do that. This would be a very heavy security issue.
@@ -139,8 +142,9 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: After logging in as "Test User", I can go to my profile view by clicking "My Profile" from the navbar and other users' profiles from user list.
 + __Implementation__:
 	+ __Back end pull request #20__: Add backend methods for profile and edit profile view
-		+ __Code Review__: No complaints were expressed during the code review.
-	+ `NO MATCHING FRONT END PULL REQUEST`
+		+ __Code Review__: See above.
+	+ __Front end pull request #30__: Add profile and edit profile views, some little tweaks, User Stories 8 and 17, fix issues 12 and 20
+		+ __Code Review__: See above.
 
 ### User Story #9: Logging In
 + __Velocity Points__: 8
@@ -151,7 +155,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #6__: Implement GET /user route
 		+ __Code Review__:
-			+ `CODE PIC MISSING`
+			+ ![](http://paperdreamer.org/gh/b6.png)
 			+ *Lukas Appelhans*: Was ist der Unterschied zwischen Flight::json und json_encode?
 			+ *Tobias Muecksch*: There's not that big of a difference, but we should use Flight's json function in the future.
 	+ __Front end pull request #4__: Implement registration and notifications
@@ -160,7 +164,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #8__: Implement user factory
 		+ __Code Review__:
-			+ `CODE PIC MISSING`
+			+ ![](http://paperdreamer.org/gh/f8.png)
 			+ *Lukas Appelhans*: What is the _.bind doing?
 			+ *Tobias Muecksch*: It binds the environment of the callback function to this, as callbacks loose their environment.
 
@@ -187,11 +191,12 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #11__: Add project controller and methods for getting belonged and all projects, add new paths to index
 		+ __Code Review__:
-			+ `CODE PIC MISSING`
+			+ ![](http://paperdreamer.org/gh/b11.png)
 			+ *Lukas Appelhans*: Probably merge the two GETs and rather use a parameter. What do you say Tobias? I'm not sure!
 			+ *Tobias Muecksch*: I have to think about that... I don't like it, but I have no better idea yet.
 			+ *Tobias Muecksch*: Since I had no better idea yet, I will merge this as soon as you respected what boom1991 said in the first two comments.
-	+ `NO MATCHING FRONT END USER STORY`
+	+ __Front end pull request #16__: Add dashboard and all projects view, add factories and controllers for those
+		+ __Code Review__:  No complaints were expressed during the code review.
 
 ### User Story #12, formerly #3.2: List of All Projects
 + __Velocity Points__: 8
@@ -201,7 +206,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 	+ __Back end pull request #11__: Add project controller and methods for getting belonged and all projects, add new paths to index
 		+ __Code Review__: See above.
 	+ __Front end pull request #16__: Add dashboard and all projects view, add factories and controllers for those
-		+ __Code Review__:  No complaints were expressed during the code review.
+		+ __Code Review__: See above.
 
 ### User Story #13, formerly #3.3: Creating Projects
 + __Velocity Points__: 10
@@ -211,7 +216,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #17__: Add createProject route to flight and implement it
 		+ __Code Review__:
-			+ `CODE PIC MISSING`
+			+ ![](http://paperdreamer.org/gh/b17.png)
 			+ *Onur Vural*: How can someone be the director before creating the project? And why must the creator always be the director?
 			+ *Lukas Appelhans*: He didn't select himself as the director of the new project.
 			+ *Lukas Appelhans*: The creator must be admin or director. I think it makes sense pretty much, you shouldn't be able to create projects which other people own. Remember the Director is more like the "god-admin" of projects.
@@ -233,10 +238,10 @@ Once I am logged in as administrator, I can open a view of all registered users.
 		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #35__:  Edit projects
 		+ __Code Review__: 
-			+ `MISSING CODE PIC`
+			+ ![](http://paperdreamer.org/gh/f35_1.png)
 			+ *Onur Vural*: Is this the way to fix the 'Reload' problem?
 			+ *Lukas Appelhans*: This makes a page refresh when we save all stuff indeed.
-			+ `MISSING CODE PIC`
+			+ ![](http://paperdreamer.org/gh/f35_2.png)
 			+ *Onur Vural*: why did you add the "event"s here? they were working just fine
 			+ *Lukas Appelhans*: No, at least for me it wasn't. the event object didn't exist for me, thus I needed to pass it from the original ng-click here...
 			+ *Onur Vural*: ok
@@ -250,7 +255,15 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: After logging in as administrator "Test Admin", I can delete project "Foo". I can verify that "Foo" is removed from the database. I can login as artist "Test Artist" of "Foo" and verify that it's no longer on my dashboard or all projects view.
 + __Implementation__:
 	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
+		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #21__: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory
+		+ __Code Review__:
+			+ ![](http://paperdreamer.org/gh/f21.png)
+			+ *Lukas Appelhans*: Why not iterate through belongedProjects only and then use the filter method? http://www.tutorialspoint.com/javascript/array_filter.htm
+			+ *Onur Vural*: I could but in this tutorial there is a huge section about compatibility. Are you positive that it won't be a problem?
+			+ *Tobias Muecksch*: We have underscore.js included in paper dreamer. see http://underscorejs.org/#filter There is a more convenient filter method.
+			+ *Onur Vural*: @tobiasmuecksch Thanks for the tip. After implementing it with filtering I don't see why it's better. Since it's not only necessary to filter but to assign too it didn't improve the code that much and made it more complicated. I'd like to let it as it was if it's ok with you, too
+			+ @onurv12 it's not more complicated if you are familiar with this code style. But I don't mind. Leave it as it was.
 
 ### User Story #16, formerly #3.6: Closing Projects
 + __Velocity Points__: 10
@@ -258,17 +271,21 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Acceptance Test #1__: After logging in as administrator "Test Admin", I can close project "Bar". I can then login as supervisor "Test Supervisor" of "Bar" and verify that "Bar" is indicated to be closed on my dashboard and all projects view. I can no longer make any changes on "Foo".
 + __Implementation__:
 	+ __Back end pull request #16__: Add backend methods for open/close and delete project functions, User Stories 15, 16 and 18
+		+ __Code Review__: See above.
 	+ __Front end pull request #21__: Add open/close and delete buttons to open/close and delete projects to dashboard and all projects view, add those methods to corresponding controllers and projects factory
+		+ __Code Review__: See above.
 
 ### User Story #17: Edit Profile View
-+ __Velocity Points__: `TODO`
++ __Velocity Points__: 10
 + __Description__: As a user, I want to be able to edit my personal information such as email, gravatar email from an edit profile page. As an administrator, I want to be able to edit my and other users' personal information from an edit profile page.
 + __Acceptance Test #1__: After logging in as "Test User", I can go to my profile view and click "Edit Profile" to edit my profile and change my email from "test@user.com" to "dummy@user.com".
 + __Acceptance Test #2__: After logging in as "Test Admin" I can go to userlist, click "Test User"s user name to go to his profile view, click "Edit Profile" to edit his profile, and change his gravatar email from "gravatar@email.com" to 
 "profile@picture.com".
 + __Implementation__:
 	+ __Back end pull request #20__: Add backend methods for profile and edit profile view
-	+ __Front end pull request #17__: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and Bugfix
+    	+ __Code Review__: No complaints were expressed during the code review.
+	+ __Front end pull request #17__: Implement 'Forgot Password' button for login, add button to 'Edit Profile' view and little fixes, User Stories 17, 21 and fix issue #26
+    	+ __Code Review__: No complaints were expressed during the code review.
 
 ### User Story #18: Open Projects
 + __Velocity Points__: 5
@@ -280,12 +297,12 @@ Once I am logged in as administrator, I can open a view of all registered users.
 		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Implement open/close and delete buttons for dashboard and all projects view, User Stories 15, 16 and 18 #21__
 		+ __Code Review 1__:
-			+ *Lukas Appelhans*: ![](http://paperdreamer.org/gh/fe-pr21-1.png) Why not iterate through belongedProjects only and then use the filter method? http://www.tutorialspoint.com/javascript/array_filter.htm
+			+ ![](http://paperdreamer.org/gh/fe-pr21-1.png)
+			+ *Lukas Appelhans*: Why not iterate through belongedProjects only and then use the filter method? http://www.tutorialspoint.com/javascript/array_filter.htm
 			+ *Onur Vural*: I could but in this tutorial there is a huge section about compatibility. Are you positive that it won't be a problem?
 			+ *Tobias Muecksch*: We have underscore.js included in paper dreamer. see http://underscorejs.org/#filter There is a more convenient filter method.
 			+ *Onur Vural*: @tobiasmuecksch Thanks for the tip. After implementing it with filtering I don't see why it's better. Since it's not only necessary to filter but to assign too it didn't improve the code that much and made it more complicated. I'd like to let it as it was if it's ok with you, too
 			+ *Tobias Muecksch*: @onurv12 it's not more complicated if you are familiar with this code style. But I don't mind. Leave it as it was.
-
  	+ __Code Review 2__: No complaints were expressed during the code review.
 
 ### User Story #19: Project View
@@ -321,7 +338,8 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 + __Implementation__:
 	+ __Back end pull request #18: Implement functionality triggered by routes for getting projects and canvases__
 		+ __Code Review 1__: 
-			+ *Onur Vural*: ![](http://paperdreamer.org/gh/be-pr18-1.png) Why did you return those to the old version? Last I checked they gave errors with the new Flight version
+			+ ![](http://paperdreamer.org/gh/be-pr18-1.png)
+			+ *Onur Vural*: Why did you return those to the old version? Last I checked they gave errors with the new Flight version
 			+ *Lukas Appelhans*: Indeed...
 			+ *Lucas Baerenfaenger*: Thank you. I'm going to correct this.
 		+ __Code Review 2__: No complaints were expressed during the code review.
@@ -329,7 +347,8 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #22: Implement project view and panel edit view__
 		+ __Code Review__:
-			+  *Lukas Appelhans*: ![](http://paperdreamer.org/gh/fe-pr22-1.png) I don't really get this, what does this do? Also an empty canvasView.html was added? Mistake?
+			+ ![](http://paperdreamer.org/gh/fe-pr22-1.png) 
+			+  *Lukas Appelhans*: I don't really get this, what does this do? Also an empty canvasView.html was added? Mistake?
 			+  *Tobias Muecksch*: it creates a html5 canvas element and sets it's DOM-ID to the ID of the Canvas. The Problem is: this is still work in progress, but since you need to integrate your implementation (like assigning users to projects and so on), I released it early. My exams are in two weeks and i can't guarantee to finish this until then and i don't want the implementation to be stuck because of this issue. But you are right. canvasView.html is not supposed to be committed. I will remove it in the next commit.
 			+  *Lukas Appelhans*: Okay, I suppose it's a good thing :)
 	+ __Front end pull request #29: Increase canvas size when editing it__
