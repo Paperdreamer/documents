@@ -126,7 +126,7 @@ Once I am logged in as administrator, I can open a view of all registered users.
 + __Implementation__:
 	+ __Back end pull request #9__: Add methods for changing user roles
 		+ __Code Review__:
-			+ `CODE PIC MISSING`
+			+ ![](http://paperdreamer.org/gh/b9.png)
 			+ *Tobias Muecksch*: You should ensure, that the user (who is logged in) is an administrator and therefore allowed to change roles. In my opinion there is a method in the userManager. If not please contact me. In case the user is not an administrator please return HTTP Status Code 403 (Forbidden)
 			+ *Onur Vural*: If the user is not administrator the dropdowns are not even shown. They are simply plain text. If you think it is still needed then I'll do it.
 			+ *Tobias Muecksch*: Of course it is needed. The backend can be accessed without the GUI. If a user directly triggers a route the function has to make sure the user has the right to do that. This would be a very heavy security issue.
