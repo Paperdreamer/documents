@@ -75,14 +75,14 @@ __How are code reviews being documented here?__ Each user story has been impleme
 	+ __Back end pull request #7__: Mail service
 		+ __Code Review__:
 			+ *Lukas Appelhans*: Hey! I just merged my requests, so you have to update this one. Also you can then simply add a mail when an account got activated as well. (Which was implemented in my patch.) The code itself looks fine though!! :) Thanks, Lukas
-			+ *Lucas Baerenfaenger*: Since the database structure does not support email activation, this implementation just sends a mail to notify the user that he/she has to wait until an administrator activates the account.
+			+ *Ursula von der Leyen*: Since the database structure does not support email activation, this implementation just sends a mail to notify the user that he/she has to wait until an administrator activates the account.
 			+ *Lukas Appelhans*: You understood me wrong sorry. We need to send another email once the account got activated by an administrator! ;) That's what the first email also indicates.
-			+ *Lucas Baerenfaenger*: I don't know how to sync forks. Please merge my request so I can implement your wish in another pull request.
+			+ *Ursula von der Leyen*: I don't know how to sync forks. Please merge my request so I can implement your wish in another pull request.
 			+ *Lukas Appelhans*: This merge request cannot be automatically merged. ;) We can discuss how to merge it locally (at your computer), then you can implement the rest and put it here. Then we can automatically merge it via the button here.
 			+ *Lukas Appelhans*: Read this: https://help.github.com/articles/syncing-a-fork
-			+ *Lucas Baerenfaenger*: Your wish is now implemented. See commit 962c007. Thanks for the link by the way.
+			+ *Ursula von der Leyen*: Your wish is now implemented. See commit 962c007. Thanks for the link by the way.
 			+ *Lukas Appelhans*: Looks fine! Awesome! :)
-			+ *Tobias Muecksch*: I consent to boom1992. P.S: @onurv12 this pull request relies on some changes in the userManagement. See this pull request by Lucas Paperdreamer/userManagement#7
+			+ *Tobias Muecksch*: I consent to boom1992. P.S: @onurv12 this pull request relies on some changes in the userManagement. See this pull request by Ursula Paperdreamer/userManagement#7
 			+ *Onur Vural*: Ok, will do. +1
 
 
@@ -243,8 +243,8 @@ Once I am logged in as administrator, I can open a view of all registered users.
 			+ *Lukas Appelhans*: No, at least for me it wasn't. the event object didn't exist for me, thus I needed to pass it from the original ng-click here...
 			+ *Onur Vural*: ok
 			+ *Tobias Muecksch*: @boom1992 that's very strange. should not happen... Are you 100% sure, this really deletes the project which is intended to be deleted?
-			+ *Lucas Appelhans*: Uh why should it delete the wrong one? The event just gets passed in order to not change the location to the project, but stay on the dashboard...
-			+ *Lukas Appelhans*: This will have to get another revision. :( Lucas and I kind of worked on some of the same things in the backend/userManagement, so I'll have to redo half of it I think!
+			+ *Lukas Appelhans*: Uh why should it delete the wrong one? The event just gets passed in order to not change the location to the project, but stay on the dashboard...
+			+ *Lukas Appelhans*: This will have to get another revision. :( Ursula and I kind of worked on some of the same things in the backend/userManagement, so I'll have to redo half of it I think!
 
 ### User Story #15, formerly #3.5: Deleting Projects
 + __Velocity Points__: 5
@@ -337,7 +337,7 @@ Additionally, I must be able not just edit a panels canvas but also a panels tit
 			+ ![](http://paperdreamer.org/gh/be-pr18-1.png)
 			+ *Onur Vural*: Why did you return those to the old version? Last I checked they gave errors with the new Flight version
 			+ *Lukas Appelhans*: Indeed...
-			+ *Lucas Baerenfaenger*: Thank you. I'm going to correct this.
+			+ *Ursula von der Leyen*: Thank you. I'm going to correct this.
 	+ __Back end pull request #23__: Implement panel saving
 		+ __Code Review__: No complaints were expressed during the code review.
 	+ __Front end pull request #22__: Implement project view and panel edit view
